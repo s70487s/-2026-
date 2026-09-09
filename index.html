@@ -240,40 +240,62 @@
   .notice-list li::before{content:"🌸";transform:none}
   .feature-list strong,.notice-list strong{color:var(--orange-deep)}
 
-  /* ---------- 搗麻糬的玉兔 ---------- */
+  /* ---------- 搗麻糬的玉兔（側面） ---------- */
   .mochi-scene{
-    width:min(238px,74%);
+    width:min(252px,80%);
     margin:30px auto 0;
   }
   .mochi-scene svg{width:100%;height:auto;display:block;overflow:visible}
 
-  /* 木槌連同前掌一起揮動 */
-  .mallet{
-    transform-box:view-box;
-    transform-origin:92px 100px;
-    animation:pound 1.3s cubic-bezier(.45,.05,.5,1) infinite;
-  }
+  /* 杵與前掌上下移動 */
+  .pounder{animation:pound 1.2s cubic-bezier(.35,0,.5,1) infinite}
   @keyframes pound{
-    0%   {transform:rotate(-16deg)}
-    38%  {transform:rotate(62deg)}
-    50%  {transform:rotate(62deg)}
-    100% {transform:rotate(-16deg)}
+    0%   {transform:translateY(-9px)}
+    40%  {transform:translateY(6px)}
+    54%  {transform:translateY(6px)}
+    100% {transform:translateY(-9px)}
   }
-  /* 麻糬被捶到的瞬間壓扁 */
+  /* 前肢：肩端固定不動，只有掌端跟著杵上下 —— 靠變形而非平移 */
+  .armF{
+    d:path("M90 106Q113 95 136 96");
+    animation:armFar 1.2s cubic-bezier(.35,0,.5,1) infinite;
+  }
+  @keyframes armFar{
+    0%   {d:path("M90 106Q113 90.5 136 87")}
+    40%  {d:path("M90 106Q113 98 136 102")}
+    54%  {d:path("M90 106Q113 98 136 102")}
+    100% {d:path("M90 106Q113 90.5 136 87")}
+  }
+  .armN{
+    d:path("M94 122Q118 109 142 106");
+    animation:armNear 1.2s cubic-bezier(.35,0,.5,1) infinite;
+  }
+  @keyframes armNear{
+    0%   {d:path("M94 122Q118 104.5 142 97")}
+    40%  {d:path("M94 122Q118 112 142 112")}
+    54%  {d:path("M94 122Q118 112 142 112")}
+    100% {d:path("M94 122Q118 104.5 142 97")}
+  }
+  /* 身體隨著出力微微下沉 */
+  .bunny-body{animation:lean 1.2s cubic-bezier(.35,0,.5,1) infinite}
+  @keyframes lean{
+    0%,100%{transform:translateY(0)}
+    44%    {transform:translateY(2.5px)}
+  }
+  /* 麻糬被搗到壓扁再回彈 */
   .mochi-blob{
     transform-box:view-box;
-    transform-origin:159px 124px;
-    animation:squish 1.3s ease-in-out infinite;
+    transform-origin:146px 130px;
+    animation:squish 1.2s ease-in-out infinite;
   }
   @keyframes squish{
-    0%,32%{transform:scaleY(1)}
-    40%   {transform:scaleY(.66)}
-    58%   {transform:scaleY(1.06)}
-    70%,100%{transform:scaleY(1)}
+    0%,32%  {transform:scaleY(1)}
+    42%     {transform:scaleY(.62)}
+    58%     {transform:scaleY(1.08)}
+    72%,100%{transform:scaleY(1)}
   }
-  /* 撞擊火花 */
-  .pow{opacity:0;animation:powFlash 1.3s linear infinite}
-  @keyframes powFlash{0%,34%{opacity:0}40%{opacity:1}54%{opacity:0}100%{opacity:0}}
+  .pow{opacity:0;animation:powFlash 1.2s linear infinite}
+  @keyframes powFlash{0%,34%{opacity:0}42%{opacity:1}56%{opacity:0}100%{opacity:0}}
 
   /* ---------- 兔腳印分隔 ---------- */
   .paws{
@@ -469,64 +491,79 @@
     </ul>
 
     <div class="mochi-scene">
-      <svg viewBox="0 0 220 170" role="img" aria-label="搗麻糬的玉兔">
+      <svg viewBox="0 0 200 182" role="img" aria-label="側身搗麻糬的玉兔">
+
+        <defs>
+          <!-- 兔子側面輪廓（Q 版比例）：同一組形狀畫兩次做出等寬外框 -->
+          <g id="pbody">
+            <circle cx="40" cy="132" r="10"/>
+            <ellipse cx="76" cy="150" rx="24" ry="9"/>
+            <ellipse cx="72" cy="124" rx="31" ry="29"/>
+            <ellipse cx="86" cy="100" rx="16" ry="16"/>
+            <ellipse cx="90" cy="32" rx="6.5" ry="20" transform="rotate(-10 90 32)"/>
+            <ellipse cx="104" cy="30" rx="6.2" ry="19" transform="rotate(9 104 30)"/>
+            <circle cx="98" cy="72" r="25"/>
+            <ellipse cx="118" cy="78" rx="9" ry="7"/>
+          </g>
+        </defs>
 
         <!-- 地面陰影 -->
-        <ellipse cx="112" cy="159" rx="84" ry="8" fill="#e6c39c" opacity=".45"/>
+        <ellipse cx="100" cy="172" rx="88" ry="8" fill="#e6c39c" opacity=".42"/>
 
-        <!-- 臼 -->
-        <path d="M122 121h74l-8 30a7 7 0 0 1-7 5h-44a7 7 0 0 1-7-5z" fill="#c98f52"/>
-        <ellipse cx="159" cy="121" rx="39" ry="10.5" fill="#dda86a"/>
-        <ellipse cx="159" cy="121" rx="30" ry="6.8" fill="#a9743d"/>
+        <!-- 臼：外壁 → 臼口 → 內緣 -->
+        <path d="M120 126l8 40q1.5 5 7 5h22q5.5 0 7-5l8-40z" fill="#c1854a"/>
+        <ellipse cx="146" cy="126" rx="26" ry="7.6" fill="#dda86a"/>
+        <ellipse cx="146" cy="126" rx="19" ry="5.2" fill="#9c6a35"/>
 
         <!-- 麻糬 -->
         <g class="mochi-blob">
-          <ellipse cx="159" cy="118" rx="27" ry="10" fill="#fffdf8" stroke="#e8d3ba" stroke-width="2"/>
-          <ellipse cx="151" cy="115" rx="8" ry="3" fill="#fff" opacity=".9"/>
+          <ellipse cx="146" cy="123" rx="17" ry="7" fill="#fffdf8" stroke="#e8d3ba" stroke-width="2"/>
+          <ellipse cx="140" cy="120.8" rx="5.4" ry="2.2" fill="#fff"/>
         </g>
-
-        <!-- 兔耳（先畫，之後被頭蓋住底部） -->
-        <g stroke="#cfa88c" stroke-width="2.6" stroke-linejoin="round">
-          <ellipse cx="58" cy="46" rx="6.6" ry="17.5" fill="#fffdfb" transform="rotate(-13 58 46)"/>
-          <ellipse cx="77" cy="45" rx="6.6" ry="17.5" fill="#fffdfb" transform="rotate(11 77 45)"/>
-        </g>
-        <ellipse cx="58" cy="47" rx="3" ry="11" fill="#ffc9d8" transform="rotate(-13 58 47)"/>
-        <ellipse cx="77" cy="46" rx="3" ry="11" fill="#ffc9d8" transform="rotate(11 77 46)"/>
-
-        <!-- 身體、尾巴、後腳 -->
-        <g stroke="#cfa88c" stroke-width="2.6" stroke-linejoin="round">
-          <circle cx="31" cy="127" r="9.5" fill="#fffdfb"/>
-          <ellipse cx="47" cy="149" rx="14" ry="7" fill="#fffdfb"/>
-          <ellipse cx="77" cy="151" rx="13" ry="6.5" fill="#fffdfb"/>
-          <ellipse cx="62" cy="118" rx="27" ry="28" fill="#fffdfb"/>
-        </g>
-
-        <!-- 頭 -->
-        <circle cx="68" cy="80" r="21" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.6"/>
-        <circle cx="61" cy="78" r="2.9" fill="#5a4636"/>
-        <circle cx="76" cy="78" r="2.9" fill="#5a4636"/>
-        <circle cx="62" cy="77" r="1" fill="#fff"/>
-        <circle cx="77" cy="77" r="1" fill="#fff"/>
-        <ellipse cx="52.5" cy="85.5" rx="4.2" ry="3" fill="#ffb3c6" opacity=".9"/>
-        <ellipse cx="84.5" cy="85.5" rx="4.2" ry="3" fill="#ffb3c6" opacity=".9"/>
-        <path d="M68.5 83.4l-2.6 2.4h5.2z" fill="#ff8fab"/>
-        <path d="M68.5 86.3q-2.8 2.8-5.5.6M68.5 86.3q2.8 2.8 5.5.6" fill="none" stroke="#5a4636" stroke-width="1.8" stroke-linecap="round"/>
 
         <!-- 撞擊火花 -->
-        <g class="pow" stroke="#f0a63c" stroke-width="3.2" stroke-linecap="round" fill="none">
-          <path d="M188 97l10-5M191 107l10 2M182 88l6-9"/>
-          <path d="M130 97l-10-5M127 107l-10 2"/>
+        <g class="pow" stroke="#f0a63c" stroke-width="3" stroke-linecap="round" fill="none">
+          <path d="M176 114l8-5M179 123l9 1M171 105l5-7M181 133l8 4"/>
         </g>
 
-        <!-- 木槌 + 前掌（一起揮動） -->
-        <g class="mallet">
-          <line x1="92" y1="100" x2="116" y2="30" stroke="#c08c4e" stroke-width="9" stroke-linecap="round"/>
-          <rect x="90" y="18" width="52" height="24" rx="11" fill="#f2d3a4" stroke="#c08c4e" stroke-width="2.6" transform="rotate(19 116 30)"/>
-          <line x1="92" y1="100" x2="103" y2="68" stroke="#cfa88c" stroke-width="17" stroke-linecap="round"/>
-          <line x1="92" y1="100" x2="103" y2="68" stroke="#fffdfb" stroke-width="12.4" stroke-linecap="round"/>
-          <circle cx="92" cy="100" r="7.8" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.4"/>
-          <circle cx="103" cy="68" r="7.2" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.4"/>
+        <!-- 遠側（左）前肢：畫在身體之前，肩端埋進軀幹裡被遮住 -->
+        <path class="armF" d="M90 106Q113 95 136 96" fill="none" stroke="#c9a58a" stroke-width="12" stroke-linecap="round"/>
+        <path class="armF" d="M90 106Q113 95 136 96" fill="none" stroke="#f5ebe2" stroke-width="8.4" stroke-linecap="round"/>
+
+        <!-- 兔子本體 -->
+        <g class="bunny-body">
+          <use href="#pbody" fill="#cfa88c" stroke="#cfa88c" stroke-width="5.2" stroke-linejoin="round"/>
+          <use href="#pbody" fill="#fffdfb"/>
+          <!-- 內耳 -->
+          <ellipse cx="90" cy="33" rx="3.1" ry="12.5" fill="#ffc9d8" transform="rotate(-10 90 33)"/>
+          <ellipse cx="104" cy="31" rx="2.9" ry="11.5" fill="#ffc9d8" transform="rotate(9 104 31)"/>
+          <!-- 臉（側面：一隻眼、鼻尖朝右） -->
+          <circle cx="107" cy="70" r="3.6" fill="#5a4636"/>
+          <circle cx="108.3" cy="68.6" r="1.2" fill="#fff"/>
+          <ellipse cx="98" cy="83" rx="5.4" ry="3.6" fill="#ffb3c6" opacity=".9"/>
+          <ellipse cx="126" cy="76" rx="2.9" ry="2.2" fill="#ff8fab"/>
+          <path d="M124.5 79.5q-3 3-5.5.8" fill="none" stroke="#5a4636" stroke-width="1.7" stroke-linecap="round"/>
         </g>
+
+        <!-- 遠側前掌 ＋ 杵（跟著上下） -->
+        <g class="pounder">
+          <circle cx="136" cy="96" r="6.4" fill="#f5ebe2" stroke="#c9a58a" stroke-width="2.2"/>
+          <path d="M134 34Q133 78 138 124L152 124Q146 78 143 34Z"
+                fill="#e0ac6b" stroke="#b8823f" stroke-width="2.6" stroke-linejoin="round"/>
+          <ellipse cx="138.5" cy="34" rx="5" ry="3.2" fill="#eebd85" stroke="#b8823f" stroke-width="2.3"/>
+        </g>
+
+        <!-- 近側前肢：肩端同樣固定 -->
+        <path class="armN" d="M94 122Q118 109 142 106" fill="none" stroke="#cfa88c" stroke-width="12.6" stroke-linecap="round"/>
+        <path class="armN" d="M94 122Q118 109 142 106" fill="none" stroke="#fffdfb" stroke-width="9" stroke-linecap="round"/>
+
+        <!-- 近側前掌（在杵前面） -->
+        <g class="pounder">
+          <circle cx="142" cy="106" r="6.7" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.2"/>
+        </g>
+
+        <!-- 臼口前緣：蓋住杵的下端 -->
+        <path d="M120 126a26 7.6 0 0 0 52 0z" fill="#cf9455"/>
 
       </svg>
     </div>
