@@ -240,6 +240,41 @@
   .notice-list li::before{content:"🌸";transform:none}
   .feature-list strong,.notice-list strong{color:var(--orange-deep)}
 
+  /* ---------- 搗麻糬的玉兔 ---------- */
+  .mochi-scene{
+    width:min(238px,74%);
+    margin:30px auto 0;
+  }
+  .mochi-scene svg{width:100%;height:auto;display:block;overflow:visible}
+
+  /* 木槌連同前掌一起揮動 */
+  .mallet{
+    transform-box:view-box;
+    transform-origin:92px 100px;
+    animation:pound 1.3s cubic-bezier(.45,.05,.5,1) infinite;
+  }
+  @keyframes pound{
+    0%   {transform:rotate(-16deg)}
+    38%  {transform:rotate(62deg)}
+    50%  {transform:rotate(62deg)}
+    100% {transform:rotate(-16deg)}
+  }
+  /* 麻糬被捶到的瞬間壓扁 */
+  .mochi-blob{
+    transform-box:view-box;
+    transform-origin:159px 124px;
+    animation:squish 1.3s ease-in-out infinite;
+  }
+  @keyframes squish{
+    0%,32%{transform:scaleY(1)}
+    40%   {transform:scaleY(.66)}
+    58%   {transform:scaleY(1.06)}
+    70%,100%{transform:scaleY(1)}
+  }
+  /* 撞擊火花 */
+  .pow{opacity:0;animation:powFlash 1.3s linear infinite}
+  @keyframes powFlash{0%,34%{opacity:0}40%{opacity:1}54%{opacity:0}100%{opacity:0}}
+
   /* ---------- 兔腳印分隔 ---------- */
   .paws{
     display:flex;justify-content:center;align-items:flex-end;gap:16px;
@@ -432,6 +467,69 @@
       <li><strong>戶外防護：</strong>建議隨身準備防蚊液與防曬用品。</li>
       <li><strong>愛護環境：</strong>現場備有大垃圾袋，活動結束讓我們一起順手帶走垃圾，留下乾淨草皮。</li>
     </ul>
+
+    <div class="mochi-scene">
+      <svg viewBox="0 0 220 170" role="img" aria-label="搗麻糬的玉兔">
+
+        <!-- 地面陰影 -->
+        <ellipse cx="112" cy="159" rx="84" ry="8" fill="#e6c39c" opacity=".45"/>
+
+        <!-- 臼 -->
+        <path d="M122 121h74l-8 30a7 7 0 0 1-7 5h-44a7 7 0 0 1-7-5z" fill="#c98f52"/>
+        <ellipse cx="159" cy="121" rx="39" ry="10.5" fill="#dda86a"/>
+        <ellipse cx="159" cy="121" rx="30" ry="6.8" fill="#a9743d"/>
+
+        <!-- 麻糬 -->
+        <g class="mochi-blob">
+          <ellipse cx="159" cy="118" rx="27" ry="10" fill="#fffdf8" stroke="#e8d3ba" stroke-width="2"/>
+          <ellipse cx="151" cy="115" rx="8" ry="3" fill="#fff" opacity=".9"/>
+        </g>
+
+        <!-- 兔耳（先畫，之後被頭蓋住底部） -->
+        <g stroke="#cfa88c" stroke-width="2.6" stroke-linejoin="round">
+          <ellipse cx="58" cy="46" rx="6.6" ry="17.5" fill="#fffdfb" transform="rotate(-13 58 46)"/>
+          <ellipse cx="77" cy="45" rx="6.6" ry="17.5" fill="#fffdfb" transform="rotate(11 77 45)"/>
+        </g>
+        <ellipse cx="58" cy="47" rx="3" ry="11" fill="#ffc9d8" transform="rotate(-13 58 47)"/>
+        <ellipse cx="77" cy="46" rx="3" ry="11" fill="#ffc9d8" transform="rotate(11 77 46)"/>
+
+        <!-- 身體、尾巴、後腳 -->
+        <g stroke="#cfa88c" stroke-width="2.6" stroke-linejoin="round">
+          <circle cx="31" cy="127" r="9.5" fill="#fffdfb"/>
+          <ellipse cx="47" cy="149" rx="14" ry="7" fill="#fffdfb"/>
+          <ellipse cx="77" cy="151" rx="13" ry="6.5" fill="#fffdfb"/>
+          <ellipse cx="62" cy="118" rx="27" ry="28" fill="#fffdfb"/>
+        </g>
+
+        <!-- 頭 -->
+        <circle cx="68" cy="80" r="21" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.6"/>
+        <circle cx="61" cy="78" r="2.9" fill="#5a4636"/>
+        <circle cx="76" cy="78" r="2.9" fill="#5a4636"/>
+        <circle cx="62" cy="77" r="1" fill="#fff"/>
+        <circle cx="77" cy="77" r="1" fill="#fff"/>
+        <ellipse cx="52.5" cy="85.5" rx="4.2" ry="3" fill="#ffb3c6" opacity=".9"/>
+        <ellipse cx="84.5" cy="85.5" rx="4.2" ry="3" fill="#ffb3c6" opacity=".9"/>
+        <path d="M68.5 83.4l-2.6 2.4h5.2z" fill="#ff8fab"/>
+        <path d="M68.5 86.3q-2.8 2.8-5.5.6M68.5 86.3q2.8 2.8 5.5.6" fill="none" stroke="#5a4636" stroke-width="1.8" stroke-linecap="round"/>
+
+        <!-- 撞擊火花 -->
+        <g class="pow" stroke="#f0a63c" stroke-width="3.2" stroke-linecap="round" fill="none">
+          <path d="M188 97l10-5M191 107l10 2M182 88l6-9"/>
+          <path d="M130 97l-10-5M127 107l-10 2"/>
+        </g>
+
+        <!-- 木槌 + 前掌（一起揮動） -->
+        <g class="mallet">
+          <line x1="92" y1="100" x2="116" y2="30" stroke="#c08c4e" stroke-width="9" stroke-linecap="round"/>
+          <rect x="90" y="18" width="52" height="24" rx="11" fill="#f2d3a4" stroke="#c08c4e" stroke-width="2.6" transform="rotate(19 116 30)"/>
+          <line x1="92" y1="100" x2="103" y2="68" stroke="#cfa88c" stroke-width="17" stroke-linecap="round"/>
+          <line x1="92" y1="100" x2="103" y2="68" stroke="#fffdfb" stroke-width="12.4" stroke-linecap="round"/>
+          <circle cx="92" cy="100" r="7.8" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.4"/>
+          <circle cx="103" cy="68" r="7.2" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.4"/>
+        </g>
+
+      </svg>
+    </div>
 
     <div class="paws" aria-hidden="true">
       <svg><use href="#paw"/></svg>
