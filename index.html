@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>愛子2026中秋歡慶聚會</title>
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #e67e22;
+            --accent-green: #27ae60;
+            --bg-color: #faf6f0;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dm-card {
+            background-color: var(--card-bg);
+            max-width: 650px;
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(211, 84, 0, 0.12);
+            border: 2px solid #f3d5b5;
+            padding: 28px 24px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px dashed var(--secondary-color);
+            padding-bottom: 18px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            font-size: 26px;
+            margin: 0 0 6px 0;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .header p {
+            color: var(--secondary-color);
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .info-panel {
+            background-color: #fff3e6;
+            border-left: 6px solid var(--secondary-color);
+            border-radius: 8px;
+            padding: 14px 18px;
+            margin-bottom: 22px;
+        }
+
+        .info-item {
+            font-size: 14.5px;
+            margin: 6px 0;
+            line-height: 1.5;
+        }
+
+        .highlight-badge {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 13.5px;
+        }
+
+        .section-title {
+            font-size: 17px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            margin-top: 22px;
+            margin-bottom: 12px;
+        }
+
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 18px;
+            background-color: var(--accent-green);
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .menu-item {
+            background: #fdfefe;
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        .menu-item-title {
+            font-weight: bold;
+            color: var(--accent-green);
+            font-size: 14.5px;
+            margin-bottom: 4px;
+        }
+
+        .menu-item-desc {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .feature-list, .notice-list {
+            padding-left: 20px;
+            margin: 6px 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .feature-list li, .notice-list li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            padding-top: 14px;
+            border-top: 1px dashed #dcdde1;
+            color: #7f8c8d;
+            font-size: 13.5px;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .dm-card {
+                box-shadow: none;
+                border: none;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dm-card">
+    <div class="header">
+        <h1>🥮 愛子 2026 中秋歡慶聚會 🥮</h1>
+        <p>月圓人團圓 ✕ 草地野餐派對 ✕ 親子放電日</p>
+    </div>
+
+    <div class="info-panel">
+        <div class="info-item"><strong>🗓️ 活動日期：</strong>2026 年 9 月 26 日（星期六，下午）</div>
+        <div class="info-item"><strong>⏰ 活動時間：</strong>15:30 – 18:30（下午涼爽時段）</div>
+        <div class="info-item"><strong>🌳 活動地點：</strong>台中中央公園（大草皮樹蔭區）</div>
+        <div class="info-item"><strong>👥 預估人數：</strong><span class="highlight-badge">20 人 (5 個家庭)</span></div>
+        <div class="info-item"><strong>💰 費用分攤：</strong>預估 <span class="highlight-badge">人均約 $300 元</span>（每戶家庭約 $1,160 元，含餐點採買與 2 桌 12 椅租借）</div>
+    </div>
+
+    <div class="section-title">🍱 豪華野餐饗宴菜單</div>
+    <div class="menu-grid">
+        <div class="menu-item">
+            <div class="menu-item-title">🍕 熱騰騰澎湃美食</div>
+            <div class="menu-item-desc">Costco 18 吋大披薩、美式香烤雞、涮嘴烤雞翅</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-title">🍱 清爽主食（全熟安心）</div>
+            <div class="menu-item-desc">精選全熟壽司組合（小朋友最愛的香甜豆皮壽司 & 鮮美蝦壽司）</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-title">🍰 甜點與水果</div>
+            <div class="menu-item-desc">法式 mini 瑪德蓮、冰涼 mini 泡芙、無籽綠葡萄、奇多雙享米果</div>
+        </div>
+        <div class="menu-item">
+            <div class="menu-item-title">🧃 暢飲飲料庫</div>
+            <div class="menu-item-desc">百香雙 Q / 芭樂綠茶、無糖優格風味氣泡飲</div>
+        </div>
+    </div>
+
+    <div class="section-title">⛺ 貼心現場配置</div>
+    <ul class="feature-list">
+        <li><strong>大人專屬休憩區：</strong>現場備有 12 張戰術折疊椅，家長們可以輕鬆坐著喝飲料聊天。</li>
+        <li><strong>兒童放電基地：</strong>鋪設大尺寸防水野餐墊，專屬小朋友的點心與遊戲空間。</li>
+        <li><strong>安心衛生維護：</strong>現場貼心備有<strong>洗手乳</strong>、免洗手套與濕紙巾，洗手吃烤雞超乾淨！</li>
+    </ul>
+
+    <div class="section-title">💡 貼心小提醒</div>
+    <ul class="notice-list">
+        <li><strong>個人裝備：</strong>建議穿著輕便服裝與運動鞋，歡迎自備泡泡槍、飛盤或小足球來放電。</li>
+        <li><strong>戶外防護：</strong>建議隨身準備防蚊液與防曬用品。</li>
+        <li><strong>愛護環境：</strong>現場備有大垃圾袋，活動結束讓我們一起順手帶走垃圾，留下乾淨草皮。</li>
+    </ul>
+
+    <div class="footer">
+        ✨ 期待與大家在中央公園相見，一起度過美好的中秋假期！ ✨
+    </div>
+</div>
+
+</body>
+</html>
