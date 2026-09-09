@@ -1,219 +1,457 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>愛子2026中秋歡慶聚會</title>
-    <style>
-        :root {
-            --primary-color: #d35400;
-            --secondary-color: #e67e22;
-            --accent-green: #27ae60;
-            --bg-color: #faf6f0;
-            --card-bg: #ffffff;
-            --text-color: #2c3e50;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JuJu愛子2026中秋歡慶聚會</title>
+<meta name="description" content="2026/9/26（六）15:30–18:30 台中中央公園草皮野餐派對，月圓人團圓，歡迎全家一起來放電！">
+<meta property="og:title" content="🐰 JuJu 愛子 2026 中秋歡慶聚會 🥮">
+<meta property="og:description" content="9/26（六）下午 15:30 台中中央公園大草皮，野餐派對 × 親子放電日，玉兔陪你賞月！">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fff8f0;
+    --peach:#ffeede;
+    --peach-deep:#ffe0c9;
+    --moon:#ffe4a1;
+    --moon-deep:#f8c95f;
+    --pink:#ff9fb6;
+    --pink-soft:#ffdde6;
+    --orange:#e8823f;
+    --orange-deep:#b5541f;
+    --badge:#c9622b;
+    --mint:#8fd4b4;
+    --mint-deep:#2f7d5d;
+    --lilac:#cdbdf0;
+    --ink:#5a4636;
+    --ink-soft:#8b7666;
+    --fur:#fffdfb;
+    --fur-line:#cfa88c;
+  }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-        }
+  *{box-sizing:border-box}
 
-        .dm-card {
-            background-color: var(--card-bg);
-            max-width: 650px;
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(211, 84, 0, 0.12);
-            border: 2px solid #f3d5b5;
-            padding: 28px 24px;
-            box-sizing: border-box;
-        }
+  body{
+    font-family:"Baloo 2","Yuanti TC","YuanTi TC","Yuanti SC","PingFang TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    background:
+      radial-gradient(circle at 12% 8%, #fff3d6 0, transparent 42%),
+      radial-gradient(circle at 88% 4%, #ffe3ee 0, transparent 38%),
+      linear-gradient(180deg,#fff6ea 0%,#fff0f4 100%);
+    color:var(--ink);
+    margin:0;
+    padding:24px 16px 40px;
+    display:flex;
+    justify-content:center;
+    line-height:1.6;
+    min-height:100vh;
+    -webkit-text-size-adjust:100%;
+  }
 
-        .header {
-            text-align: center;
-            border-bottom: 2px dashed var(--secondary-color);
-            padding-bottom: 18px;
-            margin-bottom: 20px;
-        }
+  .dm-card{
+    background:var(--cream);
+    max-width:660px;
+    width:100%;
+    border-radius:32px;
+    box-shadow:0 14px 40px rgba(197,116,58,.16), 0 2px 0 #fff inset;
+    border:3px solid #ffe2c4;
+    overflow:hidden;
+  }
 
-        .header h1 {
-            color: var(--primary-color);
-            font-size: 26px;
-            margin: 0 0 6px 0;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
+  /* ---------- 星空月亮 Hero ---------- */
+  .hero{
+    position:relative;
+    text-align:center;
+    padding:26px 22px 22px;
+    background:
+      radial-gradient(circle at 50% 12%, #fff5da 0, transparent 55%),
+      linear-gradient(180deg,#fff1de 0%,#ffe7ef 100%);
+    overflow:hidden;
+  }
+  .hero .stars{position:absolute;inset:0;pointer-events:none}
+  .hero .stars i{
+    position:absolute;font-size:12px;color:#ffca5f;opacity:.75;
+    animation:twinkle 3.4s ease-in-out infinite;
+  }
+  .hero .stars i:nth-child(1){left:8%;top:16%;animation-delay:0s}
+  .hero .stars i:nth-child(2){left:20%;top:52%;font-size:9px;animation-delay:.7s}
+  .hero .stars i:nth-child(3){right:10%;top:22%;animation-delay:1.3s}
+  .hero .stars i:nth-child(4){right:22%;top:60%;font-size:9px;animation-delay:2s}
+  .hero .stars i:nth-child(5){left:46%;top:4%;font-size:10px;animation-delay:1.7s}
+  @keyframes twinkle{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
 
-        .header p {
-            color: var(--secondary-color);
-            font-size: 15px;
-            font-weight: bold;
-            margin: 0;
-        }
+  .moon-wrap{
+    width:150px;height:150px;margin:0 auto 6px;
+    animation:floaty 5s ease-in-out infinite;
+    filter:drop-shadow(0 8px 18px rgba(248,201,95,.5));
+  }
+  .moon-wrap svg{width:100%;height:100%;display:block}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 
-        .info-panel {
-            background-color: #fff3e6;
-            border-left: 6px solid var(--secondary-color);
-            border-radius: 8px;
-            padding: 14px 18px;
-            margin-bottom: 22px;
-        }
+  .header h1{
+    color:var(--orange-deep);
+    font-size:clamp(19px,5.1vw,28px);
+    margin:8px 0 10px;
+    letter-spacing:.5px;
+    font-weight:800;
+    line-height:1.35;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.3em;
+  }
+  .header h1 .bun{
+    width:1.2em;height:1.2em;flex:0 0 auto;
+  }
+  .header h1 .t{
+    text-wrap:balance;
+  }
+  .subtitle{
+    display:inline-block;
+    background:#fff;
+    border:2px dashed var(--pink);
+    color:#b4476a;
+    font-size:clamp(12.5px,3.4vw,15px);
+    font-weight:700;
+    padding:7px 16px;
+    border-radius:999px;
+    margin:0;
+    box-shadow:0 3px 0 var(--pink-soft);
+  }
 
-        .info-item {
-            font-size: 14.5px;
-            margin: 6px 0;
-            line-height: 1.5;
-        }
+  /* ---------- 內容區 ---------- */
+  .body-wrap{padding:24px 22px 8px}
 
-        .highlight-badge {
-            background-color: var(--secondary-color);
-            color: #ffffff;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 13.5px;
-        }
+  .info-panel{
+    position:relative;
+    background:linear-gradient(180deg,#fff5e8,#ffeede);
+    border:2.5px solid var(--peach-deep);
+    border-radius:24px;
+    padding:18px 20px 16px;
+    margin-bottom:10px;
+    box-shadow:0 4px 0 #ffe9d4;
+  }
+  .info-panel .peek{
+    position:absolute;right:14px;top:-30px;width:52px;height:52px;
+    animation:peekBob 3.2s ease-in-out infinite;
+  }
+  @keyframes peekBob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-5px) rotate(4deg)}}
 
-        .section-title {
-            font-size: 17px;
-            font-weight: bold;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            margin-top: 22px;
-            margin-bottom: 12px;
-        }
+  .info-item{
+    font-size:15px;
+    margin:9px 0;
+    padding-left:2px;
+  }
+  .info-item strong{color:var(--orange-deep)}
 
-        .section-title::before {
-            content: "";
-            display: inline-block;
-            width: 8px;
-            height: 18px;
-            background-color: var(--accent-green);
-            margin-right: 10px;
-            border-radius: 4px;
-        }
+  .tentative{
+    display:inline-block;
+    background:#fff;
+    border:1.6px solid var(--pink);
+    color:#b4476a;
+    font-size:11.5px;
+    font-weight:800;
+    letter-spacing:.6px;
+    padding:1px 8px;
+    border-radius:999px;
+    margin:0 1px 0 6px;
+    vertical-align:2px;
+    white-space:nowrap;
+  }
 
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 12px;
-            margin-bottom: 18px;
-        }
+  .highlight-badge{
+    background:var(--badge);
+    color:#fff;
+    padding:3px 11px;
+    border-radius:999px;
+    font-weight:800;
+    font-size:14px;
+    white-space:nowrap;
+    display:inline-block;
+  }
 
-        .menu-item {
-            background: #fdfefe;
-            border: 1px solid #e1e8ed;
-            border-radius: 10px;
-            padding: 12px 14px;
-        }
+  /* ---------- 段落標題 ---------- */
+  .section-title{
+    font-size:clamp(17px,4.4vw,20px);
+    font-weight:800;
+    color:var(--orange-deep);
+    display:flex;
+    align-items:center;
+    gap:9px;
+    margin:28px 0 14px;
+  }
+  .section-title .ico{width:30px;height:30px;flex:0 0 30px}
+  .section-title span{
+    background:linear-gradient(transparent 68%, var(--pink-soft) 68%);
+    padding-bottom:1px;
+  }
 
-        .menu-item-title {
-            font-weight: bold;
-            color: var(--accent-green);
-            font-size: 14.5px;
-            margin-bottom: 4px;
-        }
+  /* ---------- 菜單 ---------- */
+  .menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(238px,1fr));
+    gap:13px;
+  }
+  .menu-item{
+    background:#fff;
+    border:2.5px solid #ffe6d3;
+    border-radius:20px;
+    padding:14px 16px 15px;
+    box-shadow:0 4px 0 #ffeadb;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .menu-item:nth-child(1){border-color:#ffd9c9;box-shadow:0 4px 0 #ffe3d6}
+  .menu-item:nth-child(2){border-color:#cfeddd;box-shadow:0 4px 0 #ddf3e8}
+  .menu-item:nth-child(3){border-color:#ffd6e3;box-shadow:0 4px 0 #ffe4ee}
+  .menu-item:nth-child(4){border-color:#dcd3f6;box-shadow:0 4px 0 #e8e2fa}
+  .menu-item:hover{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 9px 0 #ffe0cd}
+  .menu-item-title{
+    font-weight:800;
+    color:var(--mint-deep);
+    font-size:15.5px;
+    margin-bottom:5px;
+  }
+  .menu-item-desc{font-size:13.8px;color:#6d5a4b;line-height:1.55}
 
-        .menu-item-desc {
-            font-size: 13px;
-            color: #555;
-            line-height: 1.4;
-        }
+  /* ---------- 蘿蔔項目清單 ---------- */
+  .feature-list,.notice-list{
+    list-style:none;
+    padding:0;
+    margin:6px 0 4px;
+    font-size:14.8px;
+  }
+  .feature-list li,.notice-list li{
+    position:relative;
+    padding:10px 14px 10px 42px;
+    margin-bottom:9px;
+    background:#fff;
+    border:2px solid #ffe9d8;
+    border-radius:18px;
+  }
+  .notice-list li{background:#fffaf2;border-color:#ffe6c9}
+  .feature-list li::before,.notice-list li::before{
+    content:"🥕";
+    position:absolute;left:13px;top:9px;
+    font-size:17px;
+    transform:rotate(-14deg);
+  }
+  .notice-list li::before{content:"🌸";transform:none}
+  .feature-list strong,.notice-list strong{color:var(--orange-deep)}
 
-        .feature-list, .notice-list {
-            padding-left: 20px;
-            margin: 6px 0;
-            font-size: 14px;
-            line-height: 1.5;
-        }
+  /* ---------- 兔腳印分隔 ---------- */
+  .paws{
+    display:flex;justify-content:center;align-items:flex-end;gap:16px;
+    margin:26px 0 4px;opacity:.5;
+  }
+  .paws svg{width:17px;height:17px}
+  .paws svg:nth-child(even){transform:translateY(-7px) rotate(14deg)}
+  .paws svg:nth-child(odd){transform:rotate(-10deg)}
 
-        .feature-list li, .notice-list li {
-            margin-bottom: 6px;
-        }
+  /* ---------- Footer ---------- */
+  .footer{
+    text-align:center;
+    margin-top:6px;
+    padding:20px 22px 26px;
+    background:linear-gradient(180deg,#fff6ea,#ffeaf1);
+    border-top:3px dashed #ffd9c2;
+  }
+  .footer .buns{
+    display:flex;justify-content:center;gap:6px;margin-bottom:8px;
+  }
+  .footer .buns svg{width:46px;height:46px}
+  .footer .buns svg:nth-child(1){animation:hop 2.6s ease-in-out infinite}
+  .footer .buns svg:nth-child(2){width:56px;height:56px;animation:hop 2.6s ease-in-out .35s infinite}
+  .footer .buns svg:nth-child(3){animation:hop 2.6s ease-in-out .7s infinite}
+  @keyframes hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-8px)}}
+  .footer p{
+    margin:4px 0 0;
+    color:#a05a34;
+    font-size:15px;
+    font-weight:800;
+  }
+  .footer .mooncake{font-size:19px}
 
-        .footer {
-            text-align: center;
-            margin-top: 28px;
-            padding-top: 14px;
-            border-top: 1px dashed #dcdde1;
-            color: #7f8c8d;
-            font-size: 13.5px;
-            font-weight: bold;
-        }
+  @media (max-width:420px){
+    .body-wrap{padding:20px 15px 6px}
+    .hero{padding:20px 14px 18px}
+    .info-panel{padding:16px 15px 14px}
+    .moon-wrap{width:124px;height:124px}
+    .info-panel .peek{width:44px;height:44px;top:-25px;right:10px}
+  }
 
-        @media print {
-            body {
-                background: none;
-                padding: 0;
-            }
-            .dm-card {
-                box-shadow: none;
-                border: none;
-                max-width: 100%;
-            }
-        }
-    </style>
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+  }
+
+  @media print{
+    body{background:#fff;padding:0;display:block}
+    .dm-card{box-shadow:none;border:none;border-radius:0;max-width:100%}
+    *{animation:none!important}
+    .paws{display:none}
+    .menu-item,.feature-list li,.notice-list li,.info-panel{box-shadow:none}
+    .dm-card,.hero,.footer,.info-panel,.menu-item{
+      -webkit-print-color-adjust:exact;print-color-adjust:exact;
+    }
+  }
+</style>
 </head>
 <body>
 
+<!-- ===== SVG 圖庫（兔子們住在這裡） ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <radialGradient id="moonGrad" cx="38%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#fff6dc"/>
+      <stop offset="62%" stop-color="#ffe4a1"/>
+      <stop offset="100%" stop-color="#f6c257"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 兔頭（可愛正面） -->
+  <symbol id="bunny" viewBox="0 0 64 64">
+    <g stroke="#cfa88c" stroke-width="2.4" stroke-linejoin="round">
+      <ellipse cx="23" cy="20" rx="6.4" ry="15" fill="#fffdfb" transform="rotate(-12 23 20)"/>
+      <ellipse cx="41" cy="20" rx="6.4" ry="15" fill="#fffdfb" transform="rotate(12 41 20)"/>
+      <circle cx="32" cy="42" r="18" fill="#fffdfb"/>
+    </g>
+    <ellipse cx="23" cy="21" rx="2.9" ry="9.5" fill="#ffc9d8" transform="rotate(-12 23 21)"/>
+    <ellipse cx="41" cy="21" rx="2.9" ry="9.5" fill="#ffc9d8" transform="rotate(12 41 21)"/>
+    <circle cx="32" cy="42" r="18" fill="#fffdfb"/>
+    <circle cx="32" cy="42" r="18" fill="none" stroke="#cfa88c" stroke-width="2.4"/>
+    <circle cx="25.5" cy="39.5" r="2.7" fill="#5a4636"/>
+    <circle cx="38.5" cy="39.5" r="2.7" fill="#5a4636"/>
+    <circle cx="26.4" cy="38.6" r=".9" fill="#fff"/>
+    <circle cx="39.4" cy="38.6" r=".9" fill="#fff"/>
+    <ellipse cx="18.6" cy="45.6" rx="3.9" ry="2.7" fill="#ffb3c6" opacity=".9"/>
+    <ellipse cx="45.4" cy="45.6" rx="3.9" ry="2.7" fill="#ffb3c6" opacity=".9"/>
+    <path d="M32 44.4l-2.5 2.3h5z" fill="#ff8fab"/>
+    <path d="M32 47.2q-2.7 2.8-5.4.6M32 47.2q2.7 2.8 5.4.6" fill="none" stroke="#5a4636" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 滿月 + 玉兔剪影 -->
+  <symbol id="moon" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="88" fill="url(#moonGrad)"/>
+    <g fill="#efb84e" opacity=".38">
+      <circle cx="58" cy="66" r="13"/>
+      <circle cx="150" cy="72" r="8"/>
+      <circle cx="45" cy="118" r="7"/>
+      <circle cx="88" cy="42" r="5.5"/>
+    </g>
+    <!-- 玉兔搗藥剪影 -->
+    <g fill="#d99a3c" opacity=".62">
+      <ellipse cx="92" cy="136" rx="27" ry="20"/>
+      <circle cx="120" cy="116" r="14.5"/>
+      <ellipse cx="117" cy="92" rx="4.6" ry="15" transform="rotate(-10 117 92)"/>
+      <ellipse cx="128" cy="93" rx="4.6" ry="15" transform="rotate(9 128 93)"/>
+      <circle cx="66" cy="131" r="7.5"/>
+      <rect x="133" y="112" width="4.4" height="26" rx="2.2" transform="rotate(24 133 112)"/>
+      <path d="M140 146h22l-3 12h-16z"/>
+    </g>
+    <circle cx="100" cy="100" r="88" fill="none" stroke="#f0bd57" stroke-width="3" opacity=".55"/>
+  </symbol>
+
+  <!-- 兔腳印 -->
+  <symbol id="paw" viewBox="0 0 32 32">
+    <g fill="#d9a273">
+      <ellipse cx="16" cy="21" rx="9" ry="7.5"/>
+      <circle cx="7.5" cy="10.5" r="3.6"/>
+      <circle cx="13.6" cy="7" r="3.6"/>
+      <circle cx="19.4" cy="7" r="3.6"/>
+      <circle cx="25" cy="10.5" r="3.6"/>
+    </g>
+  </symbol>
+</svg>
+
 <div class="dm-card">
+
+  <div class="hero">
+    <div class="stars" aria-hidden="true"><i>✦</i><i>✦</i><i>✦</i><i>✦</i><i>✦</i></div>
+    <div class="moon-wrap" aria-hidden="true"><svg><use href="#moon"/></svg></div>
     <div class="header">
-        <h1>🥮 愛子 2026 中秋歡慶聚會 🥮</h1>
-        <p>月圓人團圓 ✕ 草地野餐派對 ✕ 親子放電日</p>
+      <h1>
+        <svg class="bun" aria-hidden="true"><use href="#bunny"/></svg>
+        <span class="t">JuJu 愛子 2026 中秋歡慶聚會</span>
+        <svg class="bun" aria-hidden="true"><use href="#bunny"/></svg>
+      </h1>
+      <p class="subtitle">月圓人團圓 ✕ 草地野餐派對 ✕ 親子放電日</p>
     </div>
+  </div>
+
+  <div class="body-wrap">
 
     <div class="info-panel">
-        <div class="info-item"><strong>🗓️ 活動日期：</strong>2026 年 9 月 26 日（星期六，下午）</div>
-        <div class="info-item"><strong>⏰ 活動時間：</strong>15:30 – 18:30（下午涼爽時段）</div>
-        <div class="info-item"><strong>🌳 活動地點：</strong>台中中央公園（大草皮樹蔭區）</div>
-        <div class="info-item"><strong>👥 預估人數：</strong><span class="highlight-badge">20 人 (5 個家庭)</span></div>
-        <div class="info-item"><strong>💰 費用分攤：</strong>預估 <span class="highlight-badge">人均約 $300 元</span>（每戶家庭約 $1,160 元，含餐點採買與 2 桌 12 椅租借）</div>
+      <svg class="peek" aria-hidden="true"><use href="#bunny"/></svg>
+      <div class="info-item"><strong>🗓️ 活動日期<span class="tentative">暫定</span>：</strong>2026 年 9 月 26 日（星期六，下午）</div>
+      <div class="info-item"><strong>⏰ 活動時間：</strong>15:30 – 18:30（下午涼爽時段）</div>
+      <div class="info-item"><strong>🌳 活動地點：</strong>台中中央公園（大草皮樹蔭區）</div>
+      <div class="info-item"><strong>👥 預估人數：</strong><span class="highlight-badge">20 人 (5 個家庭)</span></div>
+      <div class="info-item"><strong>💰 費用分攤：</strong>預估 <span class="highlight-badge">人均約 $300 元</span>（每戶家庭約 $1,160 元，含餐點採買與 2 桌 12 椅租借）</div>
     </div>
 
-    <div class="section-title">🍱 豪華野餐饗宴菜單</div>
+    <div class="section-title">
+      <svg class="ico" aria-hidden="true"><use href="#bunny"/></svg>
+      <span>🍱 豪華野餐饗宴菜單</span>
+    </div>
     <div class="menu-grid">
-        <div class="menu-item">
-            <div class="menu-item-title">🍕 熱騰騰澎湃美食</div>
-            <div class="menu-item-desc">Costco 18 吋大披薩、美式香烤雞、涮嘴烤雞翅</div>
-        </div>
-        <div class="menu-item">
-            <div class="menu-item-title">🍱 清爽主食（全熟安心）</div>
-            <div class="menu-item-desc">精選全熟壽司組合（小朋友最愛的香甜豆皮壽司 & 鮮美蝦壽司）</div>
-        </div>
-        <div class="menu-item">
-            <div class="menu-item-title">🍰 甜點與水果</div>
-            <div class="menu-item-desc">法式 mini 瑪德蓮、冰涼 mini 泡芙、無籽綠葡萄、奇多雙享米果</div>
-        </div>
-        <div class="menu-item">
-            <div class="menu-item-title">🧃 暢飲飲料庫</div>
-            <div class="menu-item-desc">百香雙 Q / 芭樂綠茶、無糖優格風味氣泡飲</div>
-        </div>
+      <div class="menu-item">
+        <div class="menu-item-title">🍕 熱騰騰澎湃美食</div>
+        <div class="menu-item-desc">Costco 18 吋大披薩、美式香烤雞、涮嘴烤雞翅</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title">🍱 清爽主食（全熟安心）</div>
+        <div class="menu-item-desc">精選全熟壽司組合（小朋友最愛的香甜豆皮壽司 &amp; 鮮美蝦壽司）</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title">🍰 甜點與水果</div>
+        <div class="menu-item-desc">法式 mini 瑪德蓮、冰涼 mini 泡芙、無籽綠葡萄、奇多雙享米果</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-title">🧃 暢飲飲料庫</div>
+        <div class="menu-item-desc">百香雙 Q / 芭樂綠茶、無糖優格風味氣泡飲</div>
+      </div>
     </div>
 
-    <div class="section-title">⛺ 貼心現場配置</div>
+    <div class="section-title">
+      <svg class="ico" aria-hidden="true"><use href="#bunny"/></svg>
+      <span>⛺ 貼心現場配置</span>
+    </div>
     <ul class="feature-list">
-        <li><strong>大人專屬休憩區：</strong>現場備有 12 張戰術折疊椅，家長們可以輕鬆坐著喝飲料聊天。</li>
-        <li><strong>兒童放電基地：</strong>鋪設大尺寸防水野餐墊，專屬小朋友的點心與遊戲空間。</li>
-        <li><strong>安心衛生維護：</strong>現場貼心備有<strong>洗手乳</strong>、免洗手套與濕紙巾，洗手吃烤雞超乾淨！</li>
+      <li><strong>大人專屬休憩區：</strong>現場備有 12 張戰術折疊椅，家長們可以輕鬆坐著喝飲料聊天。</li>
+      <li><strong>兒童放電基地：</strong>鋪設大尺寸防水野餐墊，專屬小朋友的點心與遊戲空間。</li>
+      <li><strong>安心衛生維護：</strong>現場貼心備有<strong>洗手乳</strong>、免洗手套與濕紙巾，洗手吃烤雞超乾淨！</li>
     </ul>
 
-    <div class="section-title">💡 貼心小提醒</div>
-    <ul class="notice-list">
-        <li><strong>個人裝備：</strong>建議穿著輕便服裝與運動鞋，歡迎自備泡泡槍、飛盤或小足球來放電。</li>
-        <li><strong>戶外防護：</strong>建議隨身準備防蚊液與防曬用品。</li>
-        <li><strong>愛護環境：</strong>現場備有大垃圾袋，活動結束讓我們一起順手帶走垃圾，留下乾淨草皮。</li>
-    </ul>
-
-    <div class="footer">
-        ✨ 期待與大家在中央公園相見，一起度過美好的中秋假期！ ✨
+    <div class="section-title">
+      <svg class="ico" aria-hidden="true"><use href="#bunny"/></svg>
+      <span>💡 貼心小提醒</span>
     </div>
+    <ul class="notice-list">
+      <li><strong>個人裝備：</strong>建議穿著輕便服裝與運動鞋，歡迎自備泡泡槍、飛盤或小足球來放電。</li>
+      <li><strong>戶外防護：</strong>建議隨身準備防蚊液與防曬用品。</li>
+      <li><strong>愛護環境：</strong>現場備有大垃圾袋，活動結束讓我們一起順手帶走垃圾，留下乾淨草皮。</li>
+    </ul>
+
+    <div class="paws" aria-hidden="true">
+      <svg><use href="#paw"/></svg>
+      <svg><use href="#paw"/></svg>
+      <svg><use href="#paw"/></svg>
+      <svg><use href="#paw"/></svg>
+      <svg><use href="#paw"/></svg>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="buns" aria-hidden="true">
+      <svg><use href="#bunny"/></svg>
+      <svg><use href="#bunny"/></svg>
+      <svg><use href="#bunny"/></svg>
+    </div>
+    <p><span class="mooncake">🥮</span> 期待與大家在中央公園相見，一起度過美好的中秋假期！ <span class="mooncake">🌕</span></p>
+  </div>
+
 </div>
 
 </body>
