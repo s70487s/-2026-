@@ -6,7 +6,7 @@
 <title>採買清單與裝備配置｜愛子2026中秋歡慶聚會</title>
 <meta name="description" content="2026 中秋聚會的完整採買清單、預估金額與裝備租借配置。">
 <meta property="og:title" content="🥕 採買清單與裝備配置">
-<meta property="og:description" content="餐點食材 2,613 元 ＋ 裝備租金 1,700 元，總計約 4,313 元，每戶約 863 元。">
+<meta property="og:description" content="餐點食材 2,613 元 ＋ 裝備租金 2,080 元，總計約 4,693 元，每戶約 939 元。">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,6 +128,9 @@
     .amt{text-align:right}
     tr.total{background:#fff3e6;border-color:var(--peach-deep)}
     tr.total td{padding:4px 0}
+    /* 手機卡片版：第一格內容與 data-label 都是「小計」，會重複顯示 */
+    tr.total td:first-child,
+    tr.total td.qty{display:none}   /* 內容重複／空白的欄位不顯示 */
   }
 
   /* ---- 裝備清單 ---- */
@@ -158,6 +161,37 @@
     display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
   }
   .subtot .ok{color:var(--mint-deep);font-size:13px;font-weight:700}
+  .subtot .over{color:#b5541f;font-size:13px;font-weight:700}
+
+  /* ---- 當天流程 ---- */
+  .prep{list-style:none;padding:0;margin:6px 0 0}
+  .prep li{
+    background:#fffaf2;border:2px solid #ffe6c9;border-radius:16px;
+    padding:11px 15px 11px 42px;margin-bottom:9px;position:relative;font-size:14px;
+  }
+  .prep li::before{content:"📌";position:absolute;left:14px;top:10px;font-size:15px}
+  .prep strong{color:var(--orange-deep)}
+
+  .lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:13px;margin-top:6px}
+  .lane{border-radius:20px;padding:14px 16px 12px;border:2.5px solid}
+  .lane-a{background:#f5fbf8;border-color:#cfeddd;box-shadow:0 4px 0 #ddf3e8}
+  .lane-b{background:#fff6f2;border-color:#ffd9c9;box-shadow:0 4px 0 #ffe3d6}
+  .lane-h{font-weight:800;font-size:15.5px;margin-bottom:9px}
+  .lane-a .lane-h{color:var(--mint-deep)}
+  .lane-b .lane-h{color:var(--orange-deep)}
+  .lane ul{list-style:none;padding:0;margin:0}
+  .lane li{
+    display:flex;gap:10px;align-items:flex-start;
+    padding:7px 0;border-top:1.5px dashed rgba(160,120,80,.25);font-size:13.8px;
+  }
+  .lane li:first-child{border-top:none}
+  .lane .t{
+    flex:0 0 46px;font-weight:800;font-size:12.8px;color:#fff;
+    background:var(--mint-deep);border-radius:999px;text-align:center;padding:1px 0;
+    margin-top:1px;
+  }
+  .lane-b .t{background:var(--badge)}
+  .lane .t.free{background:#b9a794}
 
   /* ---- 返回 ---- */
   .back{
@@ -221,8 +255,8 @@
 
     <div class="totals">
       <div class="tot"><div class="lbl">🍱 餐點食材</div><div class="num">2,613</div><div class="sub">平均 1 人約 131 元</div></div>
-      <div class="tot"><div class="lbl">⛺ 裝備租金</div><div class="num">1,700</div><div class="sub">預算 2,000 元內</div></div>
-      <div class="tot"><div class="lbl">💰 總計</div><div class="num">4,313</div><div class="sub">每戶約 863 元</div></div>
+      <div class="tot"><div class="lbl">⛺ 裝備租金</div><div class="num">2,080</div><div class="sub">超出預算 80 元</div></div>
+      <div class="tot"><div class="lbl">💰 總計</div><div class="num">4,693</div><div class="sub">每戶約 939 元</div></div>
     </div>
 
     <p class="note">💡 以上為 <strong>20 人 / 5 個家庭</strong>的預估金額，實際以採買當天售價為準。</p>
@@ -269,6 +303,22 @@
         <div class="g-memo">大人專屬座位</div>
         <a class="rentlink" href="https://rentals.campworld.tw/product/%e5%b1%b1%e8%b6%a3-%e6%96%b9%e9%b4%bb%e6%88%b0%e8%a1%93%e6%8a%98%e7%96%8a%e6%a4%85/" target="_blank" rel="noopener noreferrer">🔗 看租借商品頁</a>
       </li>
+      <li>
+        <div class="g-top">
+          <div class="g-name">黃光十米燈條<span class="g-qty">1 組</span></div>
+          <div class="g-price">180 元</div>
+        </div>
+        <div class="g-memo">3000–4000K 暖黃光、IPX7 防水。用附贈魔鬼氈繞在兩張餐桌邊緣（每張約 3.6 公尺），剩餘拉到椅背。本身無電池，<strong>由下方 N9 MINI 供電</strong>（或自備行動電源備援）。</div>
+        <a class="rentlink" href="https://rentals.campworld.tw/product/%e9%bb%83%e5%85%89%e5%8d%81%e7%b1%b3%e7%87%88%e6%a2%9d/" target="_blank" rel="noopener noreferrer">🔗 看租借商品頁</a>
+      </li>
+      <li>
+        <div class="g-top">
+          <div class="g-name">N9 MINI 五面廣角 LED 燈<span class="g-qty">1 台</span></div>
+          <div class="g-price">200 元</div>
+        </div>
+        <div class="g-memo">50–1,000 流明可調、三段色溫、IP67 防水。<strong>內建 6,200mAh 電池，在家充飽帶去即可</strong>，附 S 型掛勾可掛在中央餐檯上方當主照明；本身也是行動電源（5V／Max 15W），能反過來供電給燈條。</div>
+        <a class="rentlink" href="https://rentals.campworld.tw/product/n9-mini%e4%ba%94%e9%9d%a2%e5%bb%a3%e8%a7%92%e8%a1%8c%e5%8b%95%e9%9b%bb%e6%ba%90led%e7%87%88/" target="_blank" rel="noopener noreferrer">🔗 看租借商品頁</a>
+      </li>
     </ul>
 
     <ul class="gear own">
@@ -282,9 +332,55 @@
     </ul>
 
     <div class="subtot">
-      <span>裝備租金小計：1,700 元</span>
-      <span class="ok">✅ 穩穩控制在 2,000 元預算內！</span>
+      <span>裝備租金小計：2,080 元</span>
+      <span class="over">⚠️ 超出 2,000 元預算 80 元</span>
     </div>
+
+    <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>🚗 當天流程與分工</span></div>
+
+    <p class="note">⏱️ 時間為<strong>建議值</strong>，可依實際狀況調整。重點是：<strong>桌椅先到、食材後到</strong>，兩批分車，食材不要跟椅子擠同一台。</p>
+    <p class="note" style="margin-top:10px">🅿️ <strong>這一帶不好停車</strong>，所以務必<strong>先卸貨、再去找車位</strong>——東西一旦落地，開車的人就算停很遠也無所謂。千萬別先找車位、再扛著東西走過來。</p>
+
+    <div class="sec" style="font-size:15px;margin:20px 0 8px"><span>前一天要做的事</span></div>
+    <ul class="prep">
+      <li><strong>租借務必提前預約</strong>：租借站規定「租借當週六日，請於<strong>週三前</strong>完成預約」，過後要打電話或用官方 Line 詢問。</li>
+      <li><strong>Costco 買十三香雞翅</strong>（冷藏生鮮，約 2.5 公斤）帶回家。</li>
+      <li><strong>爭鮮預約壽司</strong>，取貨時間訂在活動當天 15:00–15:30。</li>
+      <li><strong>N9 MINI 充飽電</strong>（約 2.5 小時），順便準備一顆自己的行動電源備援。</li>
+      <li><strong>保冷袋放冰磚進冷凍庫</strong>。</li>
+    </ul>
+
+    <div class="sec" style="font-size:15px;margin:22px 0 8px"><span>活動當天</span></div>
+    <div class="lanes">
+
+      <div class="lane lane-a">
+        <div class="lane-h">🪑 A 車 · 裝備組</div>
+        <ul>
+          <li><span class="t">14:00</span><span>到租借站取 2 桌 12 椅、燈條、N9 MINI</span></li>
+          <li><span class="t">15:00</span><span>抵達公園，<strong>在最近的出入口全部卸下</strong>，一人留守顧東西，開車的人再去找車位（可能要繞遠）</span></li>
+          <li><span class="t">15:15</span><span>推車分 2 趟運到定點（第一趟桌椅、第二趟其餘）。其他家庭陸續到場後一起幫忙搬</span></li>
+          <li><span class="t">15:30</span><span>架好 2 桌 12 椅、鋪野餐墊、燈條繞桌邊固定</span></li>
+        </ul>
+      </div>
+
+      <div class="lane lane-b">
+        <div class="lane-h">🍱 B 車 · 食材組</div>
+        <ul>
+          <li><span class="t">上午</span><span>在家把十三香雞翅煎熟，放涼後冷藏（分 3 批、約 40–60 分鐘）</span></li>
+          <li><span class="t">14:30</span><span>Costco 採買：烤雞大腿 4 包、18 吋披薩、綠葡萄</span></li>
+          <li><span class="t">15:15</span><span>爭鮮取壽司（豆皮 10 組、鮮蝦 10 組）</span></li>
+          <li><span class="t">15:45</span><span>抵達公園，<strong>同樣先卸貨再停車</strong>。食材直接上桌，全程只離開冷藏約 1 小時</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <ul class="prep" style="margin-top:13px">
+      <li><span style="color:var(--orange-deep);font-weight:800">16:00 開始</span> — 壽司、披薩趁新鮮先吃掉，這兩樣最不耐放。</li>
+      <li><span style="color:var(--orange-deep);font-weight:800">17:50 前後日落</span> — 開燈條與 N9 主燈，18:10 天全黑。</li>
+      <li><span style="color:var(--orange-deep);font-weight:800">20:00 結束</span> — 垃圾一起帶走，桌椅隔天歸還（租期 2 日）。</li>
+      <li><span style="color:var(--orange-deep);font-weight:800">行前務必現勘</span> — 確認三件事的相對位置：<strong>可卸貨的出入口、最近的廁所、實際停得到車的地方</strong>。這三點決定當天順不順。</li>
+    </ul>
 
   </div>
 
