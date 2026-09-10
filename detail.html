@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採買清單與裝備配置｜愛子2026中秋歡慶聚會</title>
+<meta name="description" content="2026 中秋聚會的完整採買清單、預估金額與裝備租借配置。">
+<meta property="og:title" content="🥕 採買清單與裝備配置">
+<meta property="og:description" content="餐點食材 2,613 元 ＋ 裝備租金 1,700 元，總計約 4,313 元，每戶約 863 元。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fff8f0; --peach:#ffeede; --peach-deep:#ffe0c9;
+    --pink:#ff9fb6; --pink-soft:#ffdde6;
+    --orange:#e8823f; --orange-deep:#b5541f; --badge:#c9622b;
+    --mint:#8fd4b4; --mint-deep:#2f7d5d;
+    --lilac:#cdbdf0; --ink:#5a4636; --ink-soft:#8b7666;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family:"Baloo 2","Yuanti TC","YuanTi TC","Yuanti SC","PingFang TC","Microsoft JhengHei",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    background:
+      radial-gradient(circle at 12% 8%, #fff3d6 0, transparent 42%),
+      radial-gradient(circle at 88% 4%, #ffe3ee 0, transparent 38%),
+      linear-gradient(180deg,#fff6ea 0%,#fff0f4 100%);
+    color:var(--ink); margin:0; padding:24px 16px 40px;
+    display:flex; justify-content:center; line-height:1.6;
+    min-height:100vh; -webkit-text-size-adjust:100%;
+  }
+  .card{
+    background:var(--cream); max-width:760px; width:100%;
+    border-radius:32px; box-shadow:0 14px 40px rgba(197,116,58,.16);
+    border:3px solid #ffe2c4; overflow:hidden;
+  }
+
+  /* ---- 頁首 ---- */
+  .hero{
+    text-align:center; padding:24px 22px 20px;
+    background:linear-gradient(180deg,#fff1de 0%,#ffe7ef 100%);
+  }
+  .hero h1{
+    color:var(--orange-deep); font-size:clamp(19px,4.8vw,26px);
+    margin:6px 0 8px; font-weight:800; letter-spacing:.5px;
+    display:flex; align-items:center; justify-content:center; gap:.35em;
+  }
+  .hero h1 svg{width:1.3em;height:1.3em;flex:0 0 auto}
+  .hero p{
+    display:inline-block; background:#fff; border:2px dashed var(--pink);
+    color:#b4476a; font-size:clamp(12px,3.2vw,14px); font-weight:700;
+    padding:6px 15px; border-radius:999px; margin:0;
+    box-shadow:0 3px 0 var(--pink-soft);
+  }
+
+  .wrap{padding:24px 22px 10px}
+
+  /* ---- 費用總覽 ---- */
+  .totals{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px; margin-bottom:8px;
+  }
+  .tot{
+    background:#fff; border:2.5px solid #ffe6d3; border-radius:20px;
+    padding:14px 16px; box-shadow:0 4px 0 #ffeadb; text-align:center;
+  }
+  .tot:nth-child(2){border-color:#dcd3f6;box-shadow:0 4px 0 #e8e2fa}
+  .tot:nth-child(3){border-color:#cfeddd;box-shadow:0 4px 0 #ddf3e8}
+  .tot .lbl{font-size:13px;color:var(--ink-soft);font-weight:700;margin-bottom:2px}
+  .tot .num{font-size:clamp(20px,5vw,25px);font-weight:800;color:var(--orange-deep);line-height:1.2}
+  .tot .sub{font-size:12px;color:var(--ink-soft);margin-top:2px}
+
+  .note{
+    background:#fffaf2; border:2px solid #ffe6c9; border-radius:16px;
+    padding:10px 15px; font-size:13.8px; margin:14px 0 0; color:#6d5a4b;
+  }
+  .note strong{color:var(--orange-deep)}
+
+  /* ---- 段落標題 ---- */
+  .sec{
+    font-size:clamp(16px,4.2vw,19px); font-weight:800; color:var(--orange-deep);
+    display:flex; align-items:center; gap:9px; margin:28px 0 13px;
+  }
+  .sec svg{width:28px;height:28px;flex:0 0 28px}
+  .sec span{background:linear-gradient(transparent 68%,var(--pink-soft) 68%)}
+
+  /* ---- 表格 ---- */
+  .tablewrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  thead th{
+    text-align:left; font-size:12.5px; font-weight:800; color:var(--ink-soft);
+    padding:0 10px 8px; border-bottom:2px solid var(--peach-deep); white-space:nowrap;
+  }
+  tbody td{padding:11px 10px;border-bottom:1.5px solid #f5e6d6;vertical-align:top}
+  tbody tr:hover{background:#fffaf3}
+  .shop{font-weight:800;color:var(--mint-deep);white-space:nowrap}
+  .shop.sushi{color:#c0392b}
+  .item{font-weight:700}
+  .qty{white-space:nowrap;color:#6d5a4b}
+  .amt{font-weight:800;color:var(--orange-deep);white-space:nowrap;text-align:right}
+  .memo{font-size:13px;color:#6d5a4b}
+  tr.total td{
+    border-top:2.5px solid var(--peach-deep); border-bottom:none;
+    background:#fff3e6; font-weight:800; padding-top:13px;
+  }
+  tr.total .amt{font-size:17px}
+
+  /* 手機：每列變成一張卡片 */
+  @media (max-width:620px){
+    .tablewrap{overflow-x:visible}
+    table,tbody,tr,td{display:block;width:100%}
+    thead{display:none}
+    tbody tr{
+      background:#fff; border:2px solid #ffe9d8; border-radius:18px;
+      padding:12px 14px; margin-bottom:11px;
+    }
+    tbody td{
+      border:none; padding:3px 0; display:flex; gap:12px;
+      justify-content:space-between; align-items:baseline;
+    }
+    tbody td::before{
+      content:attr(data-label); font-weight:800; font-size:12.5px;
+      color:var(--ink-soft); flex:0 0 auto;
+    }
+    td.item{display:block;font-size:15.5px;margin-bottom:4px}
+    td.item::before{display:none}
+    .amt{text-align:right}
+    tr.total{background:#fff3e6;border-color:var(--peach-deep)}
+    tr.total td{padding:4px 0}
+  }
+
+  /* ---- 裝備清單 ---- */
+  .gear{list-style:none;padding:0;margin:6px 0 0}
+  .gear li{
+    background:#fff; border:2px solid #ffe9d8; border-radius:18px;
+    padding:13px 16px; margin-bottom:10px;
+  }
+  .gear .g-top{display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
+  .gear .g-name{font-weight:800;font-size:15px;color:var(--ink)}
+  .gear .g-price{font-weight:800;color:var(--orange-deep);white-space:nowrap}
+  .gear .g-memo{font-size:13px;color:#6d5a4b;margin-top:3px}
+  .gear .g-qty{
+    display:inline-block;background:var(--badge);color:#fff;font-size:12px;
+    font-weight:800;padding:1px 9px;border-radius:999px;margin-left:6px;vertical-align:1px;
+  }
+  .gear.own li{background:#f5fbf8;border-color:#cfeddd}
+  .gear.own .g-price{color:var(--mint-deep)}
+  .rentlink{
+    display:inline-block;margin-top:6px;font-size:12.8px;font-weight:700;
+    color:#8a5cc4;text-decoration:none;border-bottom:1.5px dashed #cdbdf0;
+  }
+  .rentlink:hover{color:#6d3fb0;border-bottom-style:solid}
+
+  .subtot{
+    background:#fff3e6;border:2px solid var(--peach-deep);border-radius:16px;
+    padding:11px 16px;font-weight:800;color:var(--orange-deep);font-size:14.5px;
+    display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  }
+  .subtot .ok{color:var(--mint-deep);font-size:13px;font-weight:700}
+
+  /* ---- 返回 ---- */
+  .back{
+    text-align:center;padding:22px 22px 26px;
+    background:linear-gradient(180deg,#fff6ea,#ffeaf1);border-top:3px dashed #ffd9c2;
+  }
+  .back a{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:2.5px solid var(--pink);border-radius:999px;
+    padding:10px 22px;color:#b4476a;font-weight:800;font-size:15px;
+    text-decoration:none;box-shadow:0 4px 0 var(--pink-soft);
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .back a:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--pink-soft)}
+  .back a svg{width:22px;height:22px}
+
+  @media (max-width:420px){ .wrap{padding:20px 15px 8px} .hero{padding:20px 14px 17px} }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media print{
+    body{background:#fff;padding:0;display:block}
+    .card{box-shadow:none;border:none;border-radius:0;max-width:100%}
+    .back{display:none}
+    .card,.hero,.tot,.gear li,tr.total{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bunny" viewBox="0 0 64 64">
+    <g stroke="#cfa88c" stroke-width="2.4" stroke-linejoin="round">
+      <ellipse cx="23" cy="20" rx="6.4" ry="15" fill="#fffdfb" transform="rotate(-12 23 20)"/>
+      <ellipse cx="41" cy="20" rx="6.4" ry="15" fill="#fffdfb" transform="rotate(12 41 20)"/>
+    </g>
+    <ellipse cx="23" cy="21" rx="2.9" ry="9.5" fill="#ffc9d8" transform="rotate(-12 23 21)"/>
+    <ellipse cx="41" cy="21" rx="2.9" ry="9.5" fill="#ffc9d8" transform="rotate(12 41 21)"/>
+    <circle cx="32" cy="42" r="18" fill="#fffdfb" stroke="#cfa88c" stroke-width="2.4"/>
+    <circle cx="25.5" cy="39.5" r="2.7" fill="#5a4636"/>
+    <circle cx="38.5" cy="39.5" r="2.7" fill="#5a4636"/>
+    <circle cx="26.4" cy="38.6" r=".9" fill="#fff"/>
+    <circle cx="39.4" cy="38.6" r=".9" fill="#fff"/>
+    <ellipse cx="18.6" cy="45.6" rx="3.9" ry="2.7" fill="#ffb3c6" opacity=".9"/>
+    <ellipse cx="45.4" cy="45.6" rx="3.9" ry="2.7" fill="#ffb3c6" opacity=".9"/>
+    <path d="M32 44.4l-2.5 2.3h5z" fill="#ff8fab"/>
+    <path d="M32 47.2q-2.7 2.8-5.4.6M32 47.2q2.7 2.8 5.4.6" fill="none" stroke="#5a4636" stroke-width="1.7" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<div class="card">
+
+  <div class="hero">
+    <h1>
+      <svg aria-hidden="true"><use href="#bunny"/></svg>
+      採買清單與裝備配置
+      <svg aria-hidden="true"><use href="#bunny"/></svg>
+    </h1>
+    <p>🥮 愛子 2026 中秋歡慶聚會 · 費用明細</p>
+  </div>
+
+  <div class="wrap">
+
+    <div class="totals">
+      <div class="tot"><div class="lbl">🍱 餐點食材</div><div class="num">2,613</div><div class="sub">平均 1 人約 131 元</div></div>
+      <div class="tot"><div class="lbl">⛺ 裝備租金</div><div class="num">1,700</div><div class="sub">預算 2,000 元內</div></div>
+      <div class="tot"><div class="lbl">💰 總計</div><div class="num">4,313</div><div class="sub">每戶約 863 元</div></div>
+    </div>
+
+    <p class="note">💡 以上為 <strong>20 人 / 5 個家庭</strong>的預估金額，實際以採買當天售價為準。</p>
+    <p class="note" style="margin-top:10px">🍴 <strong>餐具與飲料請各家庭自備</strong>：碗盤、筷子叉子請自行攜帶。<strong>現場不提供飲料與紙杯</strong>，請各家自備水壺／飲品。</p>
+    <p class="note" style="margin-top:10px">🍣 <strong>壽司建議預約取貨</strong>：向爭鮮預約 15:00–15:30 取貨，出發前拿了直接帶去，全程只放約 1 小時，比在賣場現搶更好控。</p>
+
+    <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>🛒 採買清單</span></div>
+
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>採買地點</th><th>品項內容</th><th>數量 / 規格</th><th>預估金額</th><th>備註與現場用途</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="shop sushi" data-label="採買地點">爭鮮</td><td class="item" data-label="品項">豆皮壽司</td><td class="qty" data-label="數量">10 組（20 顆）</td><td class="amt" data-label="金額">300 元</td><td class="memo" data-label="用途">全熟豆皮，小朋友最愛，30 元／組</td></tr>
+          <tr><td class="shop sushi" data-label="採買地點">爭鮮</td><td class="item" data-label="品項">鮮蝦壽司</td><td class="qty" data-label="數量">10 組（20 顆）</td><td class="amt" data-label="金額">300 元</td><td class="memo" data-label="用途">熟蝦，全熟安心，30 元／組</td></tr>
+          <tr><td class="shop" data-label="採買地點">Costco</td><td class="item" data-label="品項">18 吋大披薩（海鮮或總匯）</td><td class="qty" data-label="數量">1 張</td><td class="amt" data-label="金額">299 元</td><td class="memo" data-label="用途">飽足感熱食主力，拿著吃方便</td></tr>
+          <tr><td class="shop" data-label="採買地點">Costco</td><td class="item" data-label="品項">科克蘭 烤雞大腿（4 入裝）</td><td class="qty" data-label="數量">4 包（16 隻）</td><td class="amt" data-label="金額">792 元</td><td class="memo" data-label="用途">198 × 4 包，免拆肉、一人一隻直接拿，戶外好分食</td></tr>
+          <tr><td class="shop" data-label="採買地點">Costco</td><td class="item" data-label="品項">台灣十三香雞翅（冷藏生鮮）</td><td class="qty" data-label="數量">1 包（約 2.5 公斤）</td><td class="amt" data-label="金額">約 572 元</td><td class="memo" data-label="用途">229 元／公斤，帶回家乾煎或氣炸，出發前裝保溫盒</td></tr>
+          <tr><td class="shop" data-label="採買地點">Costco</td><td class="item" data-label="品項">科克蘭無籽綠葡萄</td><td class="qty" data-label="數量">1 盒</td><td class="amt" data-label="金額">350 元</td><td class="memo" data-label="用途">水果，洗淨後一口一顆</td></tr>
+          <tr class="total"><td data-label="小計">小計</td><td class="item" data-label="項目">餐點食材費用總額</td><td class="qty" data-label="數量"></td><td class="amt" data-label="金額">約 2,613 元</td><td class="memo" data-label="備註">平均 1 人約 131 元</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>⛺ 裝備與硬體配置</span></div>
+
+    <p class="note" style="margin-bottom:12px">🏕️ 桌椅向 <strong>露營世界 CampWorld</strong> 租借，點品項名稱可看商品頁。</p>
+
+    <ul class="gear">
+      <li>
+        <div class="g-top">
+          <div class="g-name">賽普勒斯 伸縮自如蛋捲桌 120cm<span class="g-qty">2 張</span></div>
+          <div class="g-price">500 元</div>
+        </div>
+        <div class="g-memo">1 張當「中央餐檯」，1 張當「飲料備品檯」</div>
+        <a class="rentlink" href="https://rentals.campworld.tw/product/%e8%b3%bd%e6%99%ae%e5%8b%92%e6%96%af-%e4%bc%b8%e7%b8%ae%e8%87%aa%e5%a6%82%e8%9b%8b%e6%8d%b2%e6%a1%8c-120cm/" target="_blank" rel="noopener noreferrer">🔗 看租借商品頁</a>
+      </li>
+      <li>
+        <div class="g-top">
+          <div class="g-name">山趣 方鴻戰術折疊椅<span class="g-qty">12 張</span></div>
+          <div class="g-price">1,200 元</div>
+        </div>
+        <div class="g-memo">大人專屬座位</div>
+        <a class="rentlink" href="https://rentals.campworld.tw/product/%e5%b1%b1%e8%b6%a3-%e6%96%b9%e9%b4%bb%e6%88%b0%e8%a1%93%e6%8a%98%e7%96%8a%e6%a4%85/" target="_blank" rel="noopener noreferrer">🔗 看租借商品頁</a>
+      </li>
+    </ul>
+
+    <ul class="gear own">
+      <li>
+        <div class="g-top">
+          <div class="g-name">大尺寸防水野餐墊<span class="g-qty">1 張</span></div>
+          <div class="g-price">自備 · 0 元</div>
+        </div>
+        <div class="g-memo">小朋友專屬遊戲點心基地</div>
+      </li>
+    </ul>
+
+    <div class="subtot">
+      <span>裝備租金小計：1,700 元</span>
+      <span class="ok">✅ 穩穩控制在 2,000 元預算內！</span>
+    </div>
+
+  </div>
+
+  <div class="back">
+    <a href="index.html"><svg aria-hidden="true"><use href="#bunny"/></svg>回到活動邀請卡</a>
+  </div>
+
+</div>
+
+</body>
+</html>
