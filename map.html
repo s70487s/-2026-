@@ -156,8 +156,8 @@
   <div class="wrap">
 
     <div class="maparea">
-      <svg viewBox="0 0 960 690" role="img" aria-label="台中中央公園場地示意圖，標示我們的擺放區、兩處廁所、兒童遊戲區與其他體驗區">
-        <rect x="0" y="0" width="960" height="690" rx="18" fill="var(--park)"/>
+      <svg viewBox="0 -250 960 940" role="img" aria-label="台中中央公園場地示意圖，標示我們的擺放區、兩處廁所、兒童遊戲區與其他體驗區">
+        <rect x="0" y="-250" width="960" height="940" rx="18" fill="var(--park)"/>
 
         <!-- 園區小徑 -->
         <g fill="none" stroke="#bcdcb0" stroke-width="3">
@@ -165,13 +165,16 @@
           <path d="M120 430 C 260 380, 330 470, 470 500 S 700 560, 880 500"/>
           <path d="M300 60 C 340 200, 260 320, 330 460 S 420 620, 470 680"/>
           <path d="M640 40 C 600 160, 700 250, 660 380"/>
+          <path d="M180 -230 C 300 -150, 260 -60, 380 10"/>
+          <path d="M420 -240 C 470 -140, 560 -120, 600 -30"/>
         </g>
 
         <!-- 道路 -->
         <g stroke="#c6ccd2" stroke-linecap="round" fill="none">
-          <path d="M100 0 L100 690" stroke-width="24"/>
+          <path d="M100 -250 L100 690" stroke-width="24"/>
           <path d="M100 288 C 300 272, 480 322, 640 400 S 862 528, 960 596" stroke-width="24"/>
           <path d="M872 604 L925 690" stroke-width="20"/>
+          <path d="M640 -6 H880 Q916 -6 928 26 L940 78" stroke-width="18"/>
         </g>
         <g font-size="27" font-weight="700" fill="#7d858d">
           <text x="112" y="470" transform="rotate(-90 112 470)">僑大八街</text>
@@ -180,16 +183,26 @@
           <text x="900" y="668" transform="rotate(58 900 668)">啟航路</text>
         </g>
 
+        <!-- 臺中綠美圖（美術館＋圖書館） -->
+        <g>
+          <rect x="640" y="-232" width="266" height="146" rx="16" fill="#e7e0f4" stroke="#b6a6dc" stroke-width="4"/>
+          <rect x="664" y="-208" width="98" height="98" rx="10" fill="#d8cdee"/>
+          <rect x="784" y="-208" width="98" height="98" rx="10" fill="#d8cdee"/>
+        </g>
+
         <!-- 我們的擺放區（強調） -->
-        <circle cx="252" cy="196" r="62" fill="#ffd9c2" opacity=".55"/>
-        <circle cx="252" cy="196" r="62" fill="none" stroke="var(--us)" stroke-width="3.5" stroke-dasharray="10 8"/>
+        <circle cx="324" cy="360" r="52" fill="#ffd9c2" opacity=".55"/>
+        <circle cx="324" cy="360" r="52" fill="none" stroke="var(--us)" stroke-width="3.5" stroke-dasharray="10 8"/>
 
         <!-- 標記：地圖上只放編號，名稱見下方清單 -->
         <g font-weight="800" font-size="30">
-          <circle cx="252" cy="196" r="27" fill="var(--us)"/>
-          <text x="252" y="207" text-anchor="middle" fill="#fff">1</text>
-          <text x="292" y="206" fill="var(--us)" font-size="34">我們在這</text>
-          <text x="292" y="240" fill="var(--us)" font-size="24">（建議 · 待現勘）</text>
+          <circle cx="324" cy="360" r="27" fill="var(--us)"/>
+          <text x="324" y="371" text-anchor="middle" fill="#fff">1</text>
+          <text x="264" y="352" text-anchor="end" fill="var(--us)" font-size="34">我們在這</text>
+          <text x="264" y="386" text-anchor="end" fill="var(--us)" font-size="24">（野餐定點）</text>
+
+          <circle cx="778" cy="-166" r="27" fill="#7a5fb0"/>
+          <text x="778" y="-155" text-anchor="middle" fill="#fff">8</text>
 
           <circle cx="158" cy="126" r="27" fill="var(--wc)"/>
           <text x="158" y="137" text-anchor="middle" fill="#fff">2</text>
@@ -217,6 +230,7 @@
       <span><i style="background:var(--us)"></i>我們的位置</span>
       <span><i style="background:var(--wc)"></i>廁所</span>
       <span><i style="background:var(--play)"></i>遊戲／體驗區</span>
+      <span><i style="background:#7a5fb0"></i>地標建築</span>
     </div>
 
     <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>📍 各地點說明</span></div>
@@ -224,11 +238,11 @@
     <ul class="spots">
       <li class="us">
         <div class="head"><span class="pin" style="background:var(--us)">1</span><span class="nm">我們的擺放區</span></div>
-        <div class="desc"><strong>經貿五路以北、靠近 2 號廁所的樹蔭草皮。</strong>這是建議位置，理由是<strong>離廁所最近</strong>——20 人裡有 10 個小孩、活動 4 小時，廁所距離比什麼都重要，尤其 18:10 天黑之後。<strong>確切定點待現勘確認。</strong></div>
+        <div class="desc"><strong>經貿五路以南、飛行美樂地西北側的草皮。</strong>選這裡的理由是<strong>緊鄰遊戲區</strong>——小孩整場大部分時間都會在那邊玩，大人坐在這裡看得到、叫得到，不必一直來回跑。<br><strong>要注意：廁所在馬路的另一側。</strong>詳見下方 2 號說明。</div>
       </li>
       <li>
         <div class="head"><span class="pin" style="background:var(--wc)">2</span><span class="nm">廁所（靠僑大八街側）</span></div>
-        <div class="desc">離建議擺放區最近的廁所，走過去不用穿越馬路。<strong>這是選點的主要依據。</strong></div>
+        <div class="desc">目前看到最近的廁所，但<strong>在經貿五路的另一側，帶小孩過去要穿越馬路</strong>。<br>⚠️ <strong>南側（我們這一側）可能另有廁所</strong>，地圖縮放層級不同不一定顯示得出來——<strong>現勘時務必找一下</strong>，若南側有廁所，這個問題就完全解決了。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%87%BA%E4%B8%AD%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%BB%81%E6%89%80" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
@@ -238,21 +252,26 @@
       </li>
       <li>
         <div class="head"><span class="pin" style="background:var(--play)">4</span><span class="nm">中央公園兒童遊戲區</span></div>
-        <div class="desc"><strong>在經貿五路以南</strong>，跟我們的擺放區隔一條馬路。小孩要過去玩<strong>一定要有大人陪同過馬路</strong>。</div>
+        <div class="desc"><strong>跟我們同一側，走過去不用過馬路</strong>，這是選這個定點的主要原因。小孩可以自己在遊戲區和野餐墊之間跑來跑去。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%85%92%E7%AB%A5%E9%81%8A%E6%88%B2%E5%8D%80" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
         <div class="head"><span class="pin" style="background:var(--play)">5</span><span class="nm">中央公園 - 飛行美樂地</span></div>
-        <div class="desc">同樣在經貿五路以南，緊鄰兒童遊戲區。</div>
+        <div class="desc"><strong>離我們最近的遊樂設施</strong>，就在擺放區旁邊，同樣不用過馬路。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E9%A3%9B%E8%A1%8C%E7%BE%8E%E6%A8%82%E5%9C%B0" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
         <div class="head"><span class="pin" style="background:var(--play)">6</span><span class="nm">觸覺體驗區</span></div>
-        <div class="desc">在我們東邊，同樣在經貿五路以北，<strong>不用過馬路就能走到</strong>。小孩想換個地方玩的話，這裡比兒童遊戲區安全。</div>
+        <div class="desc">在經貿五路以北，<strong>要過馬路</strong>。既然 4、5 號就在旁邊，這裡應該用不到。</div>
       </li>
       <li>
         <div class="head"><span class="pin" style="background:var(--play)">7</span><span class="nm">自我體驗區</span></div>
         <div class="desc">公園南側較遠處，走過去要一段路。</div>
+      </li>
+      <li>
+        <div class="head"><span class="pin" style="background:#7a5fb0">8</span><span class="nm">臺中綠美圖（市立美術館 ＋ 圖書館總館）</span></div>
+        <div class="desc">公園東北側的大型地標建築，<strong>從遠處就看得到，跟人報路的時候很好用</strong>。不過離我們的擺放區相當遠，走過去要一段時間，不適合當臨時廁所。</div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%87%BA%E4%B8%AD%E7%B6%A0%E7%BE%8E%E5%9C%96" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
     </ul>
 
@@ -276,10 +295,11 @@
     <p class="note">🕕 公園開放 <strong>06:00–22:00</strong>（颱風天不開放），活動 16:00–20:00 完全在開放時段內。</p>
 
     <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>✅ 現勘要確認的事</span></div>
-    <p class="note warn">⚠️ 上面的「我們的擺放區」是<strong>依廁所距離推薦的建議位置</strong>，還沒實地確認。以下四點確認完，我再把這頁的定點標死。</p>
+    <p class="note warn">⚠️ 擺放區的<strong>大致位置已經選定</strong>（飛行美樂地西北側），但以下四點還是現勘時確認一下比較保險。</p>
     <ul class="check">
       <li><strong>樹蔭草皮的實際位置</strong>——有沒有足夠遮蔭、地面平不平（要放 2 桌 12 椅）。</li>
-      <li><strong>廁所到擺放區的實際步行距離</strong>——抓 150 公尺以內比較舒服。</li>
+      <li><strong>南側有沒有廁所</strong>——這是最重要的一項。若我們這側就有，帶小孩上廁所不用過馬路，整場輕鬆很多。</li>
+      <li><strong>過馬路的地方</strong>——若只能用北側廁所，先找好行人穿越的位置，天黑後尤其要注意。</li>
       <li><strong>可卸貨的出入口</strong>——車能開到最近哪裡，推車從那裡推得動嗎（草地要大輪徑才好推）。</li>
       <li><strong>夜間照明</strong>——18:10 天黑後，從擺放區走到廁所的路上暗不暗。</li>
     </ul>
