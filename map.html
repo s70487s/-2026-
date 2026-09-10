@@ -72,17 +72,12 @@
   .dist .t{text-align:right;white-space:nowrap;color:#6d5a4b;font-size:13px}
   .dist tr.key td{background:#fff6ee}
   .dist .todo{color:#a8907c;font-weight:700;font-size:12.5px}
-  .dist .pin2{
-    display:inline-flex;width:20px;height:20px;border-radius:50%;color:#fff;
-    font-weight:800;font-size:11.5px;align-items:center;justify-content:center;
-    margin-right:6px;vertical-align:-3px;
-  }
+  .dist .pin2{margin-right:5px;font-size:15px}
   .legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:14px 0 4px}
   .legend span{
     display:inline-flex;align-items:center;gap:6px;background:#fff;
     border:2px solid #ffe6d3;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:800;
   }
-  .legend i{width:13px;height:13px;border-radius:50%;display:inline-block}
 
   .sec{
     font-size:clamp(16px,4.2vw,19px);font-weight:800;color:var(--orange-deep);
@@ -97,10 +92,7 @@
     padding:13px 16px;margin-bottom:11px;box-shadow:0 4px 0 #ffeadb;
   }
   .spots .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .spots .pin{
-    width:26px;height:26px;flex:0 0 26px;border-radius:50%;color:#fff;
-    font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center;
-  }
+  .spots .pin{flex:0 0 auto;font-size:20px;line-height:1}
   .spots .nm{font-weight:800;font-size:15.5px}
   .spots .desc{font-size:13.6px;color:#6d5a4b;margin-top:5px}
   .spots a{
@@ -183,11 +175,11 @@
         <thead><tr><th>目的地</th><th style="text-align:right">距離</th><th style="text-align:right">步行</th></tr></thead>
         <tbody>
           <tr class="key">
-            <td class="to"><span class="pin2" style="background:var(--wc)">2</span>綠美圖廁所</td>
+            <td class="to"><span class="pin2">🚻</span>綠美圖廁所（西側）</td>
             <td class="m">—</td><td class="t"><strong style="color:var(--orange-deep)">2 分</strong></td>
           </tr>
           <tr class="key">
-            <td class="to"><span class="pin2" style="background:var(--play)">4</span>兒童遊戲區／<span class="pin2" style="background:var(--play)">5</span>飛行美樂地</td>
+            <td class="to"><span class="pin2">🛝</span>兒童遊戲區／<span class="pin2">✈️</span>飛行美樂地</td>
             <td class="m">—</td><td class="t"><strong style="color:var(--orange-deep)">約 1 分</strong></td>
           </tr>
           <tr>
@@ -195,18 +187,18 @@
             <td class="m">61 公尺</td><td class="t">1 分</td>
           </tr>
           <tr>
-            <td class="to"><span class="pin2" style="background:#56708c">P</span>僑大八街路邊停車場</td>
+            <td class="to"><span class="pin2">🅿️</span>僑大八街路邊停車場</td>
             <td class="m">280 公尺</td><td class="t">4 分 <span class="todo">※</span></td>
           </tr>
           <tr>
-            <td class="to"><span class="pin2" style="background:var(--wc)">3</span>中央公園大廁所 E 區</td>
+            <td class="to"><span class="pin2">🚻</span>中央公園大廁所 E 區（東側）</td>
             <td class="m">270 公尺</td><td class="t">4 分 <span class="todo">※</span></td>
           </tr>
         </tbody>
       </table>
     </div>
     <p class="note" style="margin-bottom:12px">✅ <strong>遊戲區約 1 分、廁所約 2 分</strong>——兩個最常走的路線都很短，這是這個定點最大的優點。</p>
-    <p class="note" style="margin-bottom:12px">🌱 <strong>草皮可以直接走，不必沿步道繞</strong>。Google Maps 的路線是照步道算的，所以表上的數字偏保守，實際走起來更快——這也是為什麼 2 號廁所實測只要 2 分鐘。<br><span class="todo">※</span> 這兩筆是從 <strong>5 號飛行美樂地</strong>量的沿步道距離，從我們的定點抄草皮過去會更近。</p>
+    <p class="note" style="margin-bottom:12px">🌱 <strong>草皮可以直接走，不必沿步道繞</strong>。Google Maps 的路線是照步道算的，所以表上的數字偏保守，實際走起來更快——這也是為什麼綠美圖廁所實測只要 2 分鐘。<br><span class="todo">※</span> 這兩筆是從 <strong>✈️ 飛行美樂地</strong>量的沿步道距離，從我們的定點抄草皮過去會更近。</p>
 
     <div class="maparea">
       <svg viewBox="-460 -370 1500 1190" role="img" aria-label="台中中央公園場地示意圖，標示我們的擺放區、廁所、停車場、兒童遊戲區、綠美圖與臺中國際會展中心">
@@ -279,84 +271,77 @@
         <text x="490" y="341" text-anchor="middle" font-size="32" font-weight="800" fill="var(--us)">距路邊 61 公尺</text>
 
         <!-- 標記：地圖上只放編號，名稱見下方清單 -->
-        <g font-weight="800" font-size="40">
-          <circle cx="324" cy="360" r="36" fill="var(--us)"/>
-          <text x="324" y="374" text-anchor="middle" fill="#fff">1</text>
-          <text x="290" y="455" text-anchor="end" fill="var(--us)" font-size="40">我們在這</text>
-          <text x="290" y="492" text-anchor="end" fill="var(--us)" font-size="30">野餐定點</text>
-
-          <circle cx="95" cy="120" r="36" fill="var(--wc)"/>
-          <text x="95" y="134" text-anchor="middle" fill="#fff">2</text>
-
-          <circle cx="5" cy="162" r="36" fill="#56708c"/>
-          <text x="5" y="176" text-anchor="middle" fill="#fff">P</text>
-
-          <circle cx="884" cy="230" r="36" fill="var(--wc)"/>
-          <text x="884" y="244" text-anchor="middle" fill="#fff">3</text>
-
-          <circle cx="404" cy="486" r="36" fill="var(--play)"/>
-          <text x="404" y="500" text-anchor="middle" fill="#fff">4</text>
-
-          <circle cx="410" cy="412" r="36" fill="var(--play)"/>
-          <text x="410" y="426" text-anchor="middle" fill="#fff">5</text>
-
-          <circle cx="778" cy="-166" r="36" fill="#7a5fb0"/>
-          <text x="778" y="-152" text-anchor="middle" fill="#fff">6</text>
-
-          <circle cx="385" cy="-312" r="36" fill="#7a5fb0"/>
-          <text x="385" y="-298" text-anchor="middle" fill="#fff">7</text>
+        <g>
+          <circle cx="324" cy="360" r="36" fill="#fff" stroke="var(--us)" stroke-width="6"/>
+          <text x="324" y="375" text-anchor="middle" font-size="40">🧺</text>
+          <text x="290" y="452" text-anchor="end" fill="var(--us)" font-size="40" font-weight="800">我們在這</text>
+          <text x="290" y="490" text-anchor="end" fill="var(--us)" font-size="30" font-weight="800">野餐定點</text>
+          <circle cx="156" cy="128" r="36" fill="#fff" stroke="var(--wc)" stroke-width="6"/>
+          <text x="156" y="143" text-anchor="middle" font-size="40">🚻</text>
+          <circle cx="58" cy="162" r="36" fill="#fff" stroke="#56708c" stroke-width="6"/>
+          <text x="58" y="177" text-anchor="middle" font-size="40">🅿️</text>
+          <circle cx="884" cy="230" r="36" fill="#fff" stroke="var(--wc)" stroke-width="6"/>
+          <text x="884" y="245" text-anchor="middle" font-size="40">🚻</text>
+          <circle cx="404" cy="486" r="36" fill="#fff" stroke="var(--play)" stroke-width="6"/>
+          <text x="404" y="501" text-anchor="middle" font-size="40">🛝</text>
+          <circle cx="410" cy="412" r="36" fill="#fff" stroke="var(--play)" stroke-width="6"/>
+          <text x="410" y="427" text-anchor="middle" font-size="40">✈️</text>
+          <circle cx="778" cy="-166" r="36" fill="#fff" stroke="#7a5fb0" stroke-width="6"/>
+          <text x="778" y="-151" text-anchor="middle" font-size="40">🏛️</text>
+          <circle cx="385" cy="-312" r="36" fill="#fff" stroke="#7a5fb0" stroke-width="6"/>
+          <text x="385" y="-297" text-anchor="middle" font-size="40">🏢</text>
         </g>
       </svg>
       <p class="caption">👆 手機上可<strong>左右滑動</strong>查看完整範圍。⚠️ 示意圖，非等比例，實際距離見上方表格。</p>
     </div>
 
     <div class="legend">
-      <span><i style="background:var(--us)"></i>我們的位置</span>
-      <span><i style="background:var(--wc)"></i>廁所</span>
-      <span><i style="background:var(--play)"></i>遊戲／體驗區</span>
-      <span><i style="background:#56708c"></i>停車場</span>
-      <span><i style="background:#7a5fb0"></i>地標建築</span>
+      <span>🧺 我們的位置</span>
+      <span>🚻 廁所</span>
+      <span>🅿️ 停車場</span>
+      <span>🛝 ✈️ 遊戲區</span>
+      <span>🏛️ 🏢 地標建築</span>
     </div>
 
     <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>📍 各地點說明</span></div>
 
     <ul class="spots">
       <li class="us">
-        <div class="head"><span class="pin" style="background:var(--us)">1</span><span class="nm">我們的擺放區</span></div>
-        <div class="desc"><strong>經貿五路以南、飛行美樂地西北側的草皮。</strong>選這裡的理由是<strong>緊鄰遊戲區——走過去約 1 分鐘</strong>，小孩整場大部分時間都會在那邊玩，大人坐在這裡看得到、叫得到，不必一直來回跑。<br><strong>到經貿五路邊只有 61 公尺（步行 1 分）</strong>，這是搬運距離的關鍵數字。<br><strong>到 2 號廁所只要 2 分鐘</strong>，但路線要穿越經貿五路。詳見下方 2 號說明。</div>
+        <div class="head"><span class="pin">🧺</span><span class="nm">我們的擺放區</span></div>
+        <div class="desc"><strong>經貿五路以南、飛行美樂地西北側的草皮。</strong>選這裡的理由是<strong>緊鄰遊戲區——走過去約 1 分鐘</strong>，小孩整場大部分時間都會在那邊玩，大人坐在這裡看得到、叫得到，不必一直來回跑。<br><strong>到經貿五路邊只有 61 公尺（步行 1 分）</strong>，這是搬運距離的關鍵數字。<br><strong>到綠美圖廁所只要 2 分鐘</strong>，但路線要穿越經貿五路。詳見下方 🚻 綠美圖廁所的說明。</div>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:var(--wc)">2</span><span class="nm">綠美圖無障礙停車位及廁所</span></div>
-        <div class="desc"><strong>緊鄰僑大八街、就在路邊</strong>，跟 P 號路邊停車場只隔一條街，<strong>上廁所順路可以回車上拿東西</strong>。<br><strong>從野餐定點走過去只要 2 分鐘</strong>（實測）。<br>⚠️ 路線要<strong>穿越經貿五路</strong>，小孩務必大人陪同；天黑後帶著 N9 手電筒走。</div>
+        <div class="head"><span class="pin">🚻</span><span class="nm">綠美圖無障礙停車位及廁所（西側 · 近）</span></div>
+        <div class="desc"><strong>緊鄰僑大八街、就在路邊</strong>，跟 🅿️ 路邊停車場只隔一條街，<strong>上廁所順路可以回車上拿東西</strong>。<br><strong>從野餐定點走過去只要 2 分鐘</strong>（實測）。<br>⚠️ 路線要<strong>穿越經貿五路</strong>，小孩務必大人陪同；天黑後帶著 N9 手電筒走。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E7%B6%A0%E7%BE%8E%E5%9C%96%E7%84%A1%E9%9A%9C%E7%A4%99%E5%81%9C%E8%BB%8A%E4%BD%8D%E5%8F%8A%E5%BB%81%E6%89%80" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:#56708c">P</span><span class="nm">僑大八街路邊停車場</span></div>
-        <div class="desc"><strong>24 小時營業</strong>，就在僑大八街路邊，地址 407 臺中市西屯區港尾里僑大八街（Plus code <strong>5MR2+MR</strong>）。<strong>與 2 號廁所只隔一條街</strong>，停好車先上廁所再走進來很順。</div>
+        <div class="head"><span class="pin">🅿️</span><span class="nm">僑大八街路邊停車場</span></div>
+        <div class="desc"><strong>24 小時營業</strong>，就在僑大八街路邊，地址 407 臺中市西屯區港尾里僑大八街（Plus code <strong>5MR2+MR</strong>）。<strong>與 🚻 綠美圖廁所只隔一條街</strong>，停好車先上廁所再走進來很順。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%83%91%E5%A4%A7%E5%85%AB%E8%A1%97%E8%B7%AF%E9%82%8A%E5%81%9C%E8%BB%8A%E5%A0%B4" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:var(--wc)">3</span><span class="nm">中央公園大廁所 E 區</span></div>
-        <div class="desc"><strong>Google Maps 實測：距離擺放區 270 公尺、步行 4 分鐘</strong>。<br>意外地跟 2 號綠美圖廁所<strong>幾乎一樣近</strong>（280 公尺）。路線沿經貿五路往東再往北，同樣要注意馬路。</div>
+        <div class="head"><span class="pin">🚻</span><span class="nm">中央公園大廁所 E 區（東側 · 遠）</span></div>
+        <div class="desc"><strong>Google Maps 實測：距離擺放區 270 公尺、步行 4 分鐘</strong>。<br>意外地跟西側的綠美圖廁所<strong>幾乎一樣近</strong>（280 公尺）。路線沿經貿五路往東再往北，同樣要注意馬路。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%A4%A7%E5%BB%81%E6%89%80E%E5%8D%80" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:var(--play)">4</span><span class="nm">中央公園兒童遊戲區</span></div>
+        <div class="head"><span class="pin">🛝</span><span class="nm">中央公園兒童遊戲區</span></div>
         <div class="desc"><strong>走過去約 1 分鐘，跟我們同一側，不用過馬路</strong>，這是選這個定點的主要原因。草皮可以直接穿越，小孩自己在遊戲區和野餐墊之間跑來跑去也看得到。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%E5%85%92%E7%AB%A5%E9%81%8A%E6%88%B2%E5%8D%80" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:var(--play)">5</span><span class="nm">中央公園 - 飛行美樂地</span></div>
+        <div class="head"><span class="pin">✈️</span><span class="nm">中央公園 - 飛行美樂地</span></div>
         <div class="desc"><strong>離我們最近的遊樂設施</strong>，就在擺放區旁邊，走過去約 1 分鐘，同樣不用過馬路。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92-%E9%A3%9B%E8%A1%8C%E7%BE%8E%E6%A8%82%E5%9C%B0" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:#7a5fb0">6</span><span class="nm">臺中綠美圖（市立美術館 ＋ 圖書館總館）</span></div>
+        <div class="head"><span class="pin">🏛️</span><span class="nm">臺中綠美圖（市立美術館 ＋ 圖書館總館）</span></div>
         <div class="desc">公園東北側的大型地標建築，<strong>從遠處就看得到，跟人報路的時候很好用</strong>。不過離我們的擺放區相當遠，走過去要一段時間，不適合當臨時廁所。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%87%BA%E4%B8%AD%E7%B6%A0%E7%BE%8E%E5%9C%96" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
       <li>
-        <div class="head"><span class="pin" style="background:#7a5fb0">7</span><span class="nm">臺中國際會展中心</span></div>
+        <div class="head"><span class="pin">🏢</span><span class="nm">臺中國際會展中心</span></div>
         <div class="desc"><strong>橫跨公園整條北側</strong>，西起僑大八街、東到中科路，是非常大的建築群，<strong>開車過來時很好認</strong>，可以當導航的參考點。<br>⚠️ <strong>如果當天剛好有大型展覽，周邊車流會明顯變多、停車位更難找</strong>——出發前可以查一下當天有沒有展。</div>
         <a href="https://www.google.com/maps/search/?api=1&amp;query=%E8%87%BA%E4%B8%AD%E5%9C%8B%E9%9A%9B%E6%9C%83%E5%B1%95%E4%B8%AD%E5%BF%83" target="_blank" rel="noopener noreferrer">🔗 在 Google Maps 搜尋</a>
       </li>
@@ -383,7 +368,7 @@
     另外請留意兩件事——<strong>不搭棚帳、不用營釘</strong>（自治條例第十三條第十款禁止搭設棚帳），<strong>活動結束桌椅全部收走</strong>，不要留在現場。</p>
 
     <div class="sec"><svg aria-hidden="true"><use href="#bunny"/></svg><span>🅿️ 停車</span></div>
-    <p class="note">🅿️ <strong>建議停「僑大八街路邊停車場」</strong>（24 小時，見上方 P 號）——它緊鄰 2 號廁所，停好車走 <strong>280 公尺、4 分鐘</strong>到擺放區。</p>
+    <p class="note">🅿️ <strong>建議停「僑大八街路邊停車場」</strong>（24 小時，見地圖 🅿️ 標記）——它緊鄰 綠美圖廁所，停好車走 <strong>280 公尺、4 分鐘</strong>到擺放區。</p>
     <p class="note" style="margin-top:10px">🛒 <strong>搬運要有心理準備</strong>：全部裝備約 <strong>69 公斤／300 公升</strong>，從停車場推 280 公尺、還要穿越經貿五路，<strong>推車大概要跑 2 趟</strong>。先卸重的（桌椅），第二趟再載怕壓的食材。</p>
     <p class="note warn" style="margin-top:10px">💡 <strong>如果經貿五路邊有可臨停的位置，卸貨只要走 61 公尺</strong>，比 280 公尺輕鬆太多。但那是主要道路，<strong>能不能臨停請現勘時確認</strong>，不要冒險違停。</p>
     <p class="note" style="margin-top:10px">其他選擇：公園另有 <strong>地下停車場（經貿路，約 812 席）</strong>、北側（環中路）、南側（河南路），周邊還有 4 座公私有停車場。車位狀況可打管理所 <strong>04-37062600 #112</strong>。</p>
@@ -395,7 +380,7 @@
       <li><strong>樹蔭草皮的實際位置</strong>——有沒有足夠遮蔭、地面平不平（要放 2 桌 12 椅）。</li>
       <li><strong>經貿五路能不能臨停卸貨</strong>——這是最有價值的一項。可以的話搬運距離從 280 公尺縮到 61 公尺。</li>
       <li><strong>穿越經貿五路的位置</strong>——行人穿越道或路口在哪，天黑後帶小孩去廁所會一直用到。</li>
-      <li><strong>穿越經貿五路的位置</strong>——去 2 號廁所要過馬路，確認行人穿越點好不好走、推嬰兒車過不過得去。</li>
+      <li><strong>穿越經貿五路的位置</strong>——去綠美圖廁所要過馬路，確認行人穿越點好不好走、推嬰兒車過不過得去。</li>
       <li><strong>可卸貨的出入口</strong>——車能開到最近哪裡，推車從那裡推得動嗎（草地要大輪徑才好推）。</li>
       <li><strong>夜間照明</strong>——18:10 天黑後，從擺放區走到廁所的路上暗不暗。</li>
     </ul>
